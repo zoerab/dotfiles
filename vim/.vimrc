@@ -140,9 +140,6 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
-" Go programming
-"set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
-
 " Undotree configurations
 nnoremap <F5> :UndotreeToggle<cr>
 if has("persistent_undo")
