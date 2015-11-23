@@ -41,8 +41,6 @@ filetype plugin indent on
 let mapleader=","
 
 " VIM current theme
-"color Monokai
-"color Chasing_Logic
 color 0x7A69_dark
 
 set cursorline
