@@ -39,6 +39,7 @@ Plugin 'slim-template/vim-slim'
 filetype plugin indent on
 
 let mapleader=","
+let g:mapleader=","
 
 " VIM current theme
 color 0x7A69_dark
@@ -126,18 +127,28 @@ endif
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-
-" Syntastic
-"let g:syntastic_mode_map = { 'mode': 'passive' }
-"let g:syntastic_ruby_exec = '~/.rvm/rubies/ruby-2.0.0-p0/bin/ruby'
+let NERDTreeShowHidden=1
+nmap <silent> <leader>y :NERDTreeFind<cr>
 
 " CtrlP
 nnoremap <silent> t :CtrlP<cr>
+nmap <silent> <leader>r :CtrlPBuffer<cr>
+let g:ctrlp_dotfiles=1
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
+" Fugitive Shortcuts
+nmap <silent> <leader>gs :Gstatus<cr>
+nmap <leader>ge :Gedit<cr>
+nmap <silent><leader>gr :Gread<cr>
+nmap <silent><leader>gb :Gblame<cr>
+nmap <leader>m :MarkedOpen!<cr>
+nmap <leader>mq :MarkedQuit<cr>
+
+" Toggle Syntastic
+nmap <leader>s :SyntasticToggleMode<cr>
 
 " Undotree configurations
 nnoremap <F5> :UndotreeToggle<cr>
