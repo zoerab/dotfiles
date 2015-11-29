@@ -83,7 +83,10 @@ au BufRead,BufNewFile *.go set filetype=go
 autocmd VimEnter * set nosc
 
 " Enable mouse in VIM
-set mouse=a
+if has('mouse')
+  set mouse=a
+  set ttymouse=xterm2
+endif
 
 " Space character in vertical splitt line
 set fillchars=vert:\ 
@@ -93,7 +96,6 @@ imap jj <ESC>
 
 " save all files on focus lost, ignoring warnings about untitled buffers
 autocmd FocusLost * silent! wa
-":au FocusLost * :wa
 
 " Easier split navigation (ctrl+j,h,k,l buttons)
 nnoremap <C-J> <C-W><C-J>
