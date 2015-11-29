@@ -36,9 +36,11 @@ Plugin 'rking/ag.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'slim-template/vim-slim'
 Plugin 'benmills/vimux'
+Plugin 'sjl/vitality.vim'
 
 filetype plugin indent on
 
+" Comma is now a leader
 let mapleader=","
 let g:mapleader=","
 
@@ -88,6 +90,10 @@ set fillchars=vert:\
 
 " Quick ESC
 imap jj <ESC>
+
+" save all files on focus lost, ignoring warnings about untitled buffers
+autocmd FocusLost * silent! wa
+":au FocusLost * :wa
 
 " Easier split navigation (ctrl+j,h,k,l buttons)
 nnoremap <C-J> <C-W><C-J>
