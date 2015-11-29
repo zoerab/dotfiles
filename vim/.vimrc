@@ -35,6 +35,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'slim-template/vim-slim'
+Plugin 'benmills/vimux'
 
 filetype plugin indent on
 
