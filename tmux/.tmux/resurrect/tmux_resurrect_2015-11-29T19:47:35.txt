@@ -1,0 +1,16 @@
+pane	0	0	:vim	1	:*	0	:/Users/er4zr	1	vim	:vim .tmux.conf
+pane	0	1	:vps	0	:	0	:/Users/er4zr	1	zsh	:
+pane	0	2	:brew	0	:	0	:	1	reattach-to-user-namespace	:su - dominus
+pane	0	3	:vagrant	0	:	0	:/Users/er4zr/VVV	1	zsh	:
+pane	0	4	:gulp	0	:	0	:/Users/er4zr/Documents/School/_ZELFSTUDIE/Gulp	0	zsh	:
+pane	0	4	:gulp	0	:	1	:/Users/er4zr/Documents/School/_ZELFSTUDIE/Gulp/web-starter-kit	1	zsh	:
+pane	0	5	:zsh	0	:	0	:/Users/er4zr	1	zsh	:
+pane	0	6	:dotfiles	0	:-	0	:/Users/er4zr/dotfiles	1	zsh	:
+window	0	0	1	:*	bd5d,211x54,0,0,0
+window	0	1	0	:	bd5e,211x54,0,0,1
+window	0	2	0	:	bd5f,211x54,0,0,2
+window	0	3	0	:	bd60,211x54,0,0,3
+window	0	4	0	:	6917,211x54,0,0[211x27,0,0,6,211x26,0,28,7]
+window	0	5	0	:	bd65,211x54,0,0,8
+window	0	6	0	:-	5ee0,211x54,0,0,11
+state	0	
