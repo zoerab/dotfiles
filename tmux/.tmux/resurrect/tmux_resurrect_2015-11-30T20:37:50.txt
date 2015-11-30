@@ -1,0 +1,19 @@
+pane	0	0	:zsh	1	:*	0	:/Users/er4zr	1	zsh	:
+pane	FUN	0	:vim	0	:-	0	:/Users/er4zr	1	vim	:vim .vimrc
+pane	FUN	1	:dotfiles	0	:	0	:/Users/er4zr/dotfiles	0	zsh	:
+pane	FUN	1	:dotfiles	0	:	1	:/Users/er4zr/dotfiles/tmux/.tmux/resurrect	1	zsh	:
+pane	FUN	2	:VPS	0	:	0	:/Users/er4zr/dotfiles	1	zsh	:
+pane	FUN	3	:net	0	:	0	:/Users/er4zr	0	zsh	:
+pane	FUN	3	:net	0	:	1	:/Users/er4zr	0	zsh	:
+pane	FUN	3	:net	0	:	2	:/Users/er4zr	1	zsh	:
+pane	FUN	4	:brew	0	:	0	:/	0	zsh	:
+pane	FUN	4	:brew	0	:	1	:/Users/er4zr/dotfiles/vim/.vim	1	zsh	:
+pane	FUN	5	:vim	1	:*	0	:/Users/er4zr/Documents/School/_ZELFSTUDIE/Vim	1	vim	:vim
+window	0	0	1	:*	bd5d,211x54,0,0,0
+window	FUN	0	0	:-	bd5e,211x54,0,0,1
+window	FUN	1	0	:	6a27,211x54,0,0{103x54,0,0,2,107x54,104,0,12}
+window	FUN	2	0	:	bd60,211x54,0,0,3
+window	FUN	3	0	:	adfc,211x54,0,0{103x54,0,0,9,107x54,104,0[107x20,104,0,10,107x33,104,21,11]}
+window	FUN	4	0	:	d3a6,211x54,0,0{103x54,0,0,6,107x54,104,0,7}
+window	FUN	5	1	:*	bd65,211x54,0,0,8
+state	FUN	0

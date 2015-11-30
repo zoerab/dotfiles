@@ -1,4 +1,8 @@
-.gitignore
-tmux/.tmux/resurrect/*
-tmux/.tmux/resurrect/last
-tmux/.tmux/plugins/tmux-sessionist
+./.gitignore
+./tmux/.tmux/resurrect/*
+./tmux/.tmux/plugins/tmux-sessionist
+./tmux/.tmux/plugins/tmux-continuum/scripts/handle_tmux_automatic_start/README.md
+./tmux/.tmux/plugins/tmux-resurrect/run_tests
+./tmux/.tmux/plugins/tmux-resurrect/tests/helpers/helpers.sh
+./tmux/.tmux/plugins/tmux-resurrect/tests/run_tests_in_isolation
+./vim/.vim/init.vim
