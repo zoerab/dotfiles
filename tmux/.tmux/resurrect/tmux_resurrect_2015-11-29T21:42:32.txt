@@ -1,9 +1,0 @@
-pane	0	0	:vim	1	:*	0	:/Users/er4zr	1	vim	:vim .vimrc
-pane	0	1	:dotfiles	0	:-	0	:/Users/er4zr/dotfiles	1	zsh	:
-pane	0	2	:VPS	0	:	0	:/Users/er4zr/dotfiles	1	zsh	:
-pane	0	3	:zsh	0	:	0	:/Users/er4zr/dotfiles	1	zsh	:
-window	0	0	1	:*	bd5d,211x54,0,0,0
-window	0	1	0	:-	bd5e,211x54,0,0,1
-window	0	2	0	:	bd5f,211x54,0,0,2
-window	0	3	0	:	bd60,211x54,0,0,3
-state	0	
