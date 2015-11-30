@@ -1,9 +1,0 @@
-pane	FUN	0	:vim	1	:*	0	:/Users/er4zr	1	vim	:vim .vimrc
-pane	FUN	1	:dotfiles	0	:-	0	:/Users/er4zr/dotfiles	1	zsh	:
-pane	FUN	2	:VPS	0	:	0	:/Users/er4zr/dotfiles	1	zsh	:
-pane	FUN	3	:zsh	0	:	0	:/Users/er4zr/dotfiles	1	zsh	:
-window	FUN	0	1	:*	bd5d,211x54,0,0,0
-window	FUN	1	0	:-	bd5e,211x54,0,0,1
-window	FUN	2	0	:	bd5f,211x54,0,0,2
-window	FUN	3	0	:	bd60,211x54,0,0,3
-state	FUN	
