@@ -48,7 +48,7 @@ let g:mapleader=","
 color 0x7A69_dark
 
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set expandtab
 set modelines=0
 set shiftwidth=2
@@ -158,6 +158,9 @@ nmap <leader>mq :MarkedQuit<cr>
 
 " Toggle Syntastic
 nmap <leader>s :SyntasticToggleMode<cr>
+
+" Emmet config
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Undotree configurations
 nnoremap <F5> :UndotreeToggle<cr>
