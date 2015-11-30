@@ -1,3 +1,4 @@
-/tmux/.tmux/resurrect/*
-/tmux/.tmux/resurrect/last
-/tmux/.tmux/plugins/tmux-sessionist
+.gitignore
+tmux/.tmux/resurrect/*
+tmux/.tmux/resurrect/last
+tmux/.tmux/plugins/tmux-sessionist
