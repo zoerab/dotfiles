@@ -48,7 +48,6 @@ let g:mapleader=","
 color 0x7A69_dark
 
 set cursorline
-"set cursorcolumn
 set expandtab
 set modelines=0
 set shiftwidth=2
