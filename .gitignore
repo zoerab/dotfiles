@@ -1,30 +1,10 @@
-./tmux/.tmux/resurrect/
-./tmux/.tmux/resurrect/last
-./tmux/.tmux/resurrect/*
-./tmux/.tmux/plugins/tmux-sessionist
-./tmux/.tmux/plugins/tmux-continuum/scripts/handle_tmux_automatic_start/README.md
-./tmux/.tmux/plugins/tmux-resurrect/run_tests
-./tmux/.tmux/plugins/tmux-resurrect/tests/helpers/helpers.sh
-./tmux/.tmux/plugins/tmux-resurrect/tests/run_tests_in_isolation
-./vim/.vim/init.vim
-tmux/.tmux/resurrect/
-tmux/.tmux/resurrect/last
+# Ignore everything by default
+*
+
+# Watch only these files and directories
+!tmux/.tmux.conf
+!vim/.vimrc
+!vimperator/.vimperatorrc
+
+# Ignore the last session file for resurrect plugin in Tmux
 tmux/.tmux/resurrect/*
-tmux/.tmux/plugins/tmux-sessionist
-tmux/.tmux/plugins/tmux-continuum/scripts/handle_tmux_automatic_start/README.md
-tmux/.tmux/plugins/tmux-resurrect/run_tests
-tmux/.tmux/plugins/tmux-resurrect/tests/helpers/helpers.sh
-tmux/.tmux/plugins/tmux-resurrect/tests/run_tests_in_isolation
-vim/.vim/init.vim
-/tmux/.tmux/resurrect/
-/tmux/.tmux/resurrect/last
-/tmux/.tmux/resurrect/*
-/tmux/.tmux/plugins/tmux-sessionist
-/tmux/.tmux/plugins/tmux-continuum/scripts/handle_tmux_automatic_start/README.md
-/tmux/.tmux/plugins/tmux-resurrect/run_tests
-/tmux/.tmux/plugins/tmux-resurrect/tests/helpers/helpers.sh
-/tmux/.tmux/plugins/tmux-resurrect/tests/run_tests_in_isolation
-/vim/.vim/init.vim
-
-vimperatoa/.vimperator/info/default/history-command
-
