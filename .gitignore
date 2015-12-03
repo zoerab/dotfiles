@@ -26,3 +26,5 @@ vim/.vim/init.vim
 /tmux/.tmux/plugins/tmux-resurrect/tests/run_tests_in_isolation
 /vim/.vim/init.vim
 
+vimperatoa/.vimperator/info/default/history-command
+
