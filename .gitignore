@@ -5,6 +5,3 @@
 !tmux/.tmux.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
-
-# Ignore the last session file for resurrect plugin in Tmux
-tmux/.tmux/resurrect/*
