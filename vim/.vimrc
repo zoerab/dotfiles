@@ -171,7 +171,8 @@ endif
 " Airline configurations
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'luna'
+"let g:airline_theme = 'luna'
+let g:airline_theme = 'dark'
 
 " Tmux integration with airline
 let g:airline#extensions#tmuxline#enabled = 0
