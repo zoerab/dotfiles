@@ -45,7 +45,7 @@ let mapleader=","
 let g:mapleader=","
 
 " VIM current theme
-color 0x7A69_dark
+color obsidian
 
 set cursorline
 set expandtab
@@ -171,12 +171,12 @@ endif
 " Airline configurations
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme = 'luna'
 let g:airline_theme = 'dark'
+"let g:airline_theme = 'kolor'
 
 " Tmux integration with airline
 let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme = 'vim_powerline'
+let g:tmuxline_theme = 'airline'
 let g:tmuxline_preset = 'full'
 
 " Quit with :Q
