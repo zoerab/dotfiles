@@ -45,9 +45,7 @@ let mapleader=","
 let g:mapleader=","
 
 " VIM current theme
-"color adam
-"color visualstudio
-color CodeFactoryv3
+color adam
 
 set cursorline
 set expandtab
