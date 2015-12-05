@@ -45,8 +45,12 @@ let mapleader=","
 let g:mapleader=","
 
 " VIM current theme
+<<<<<<< HEAD
 "color adam
 color vj
+=======
+color obsidian
+>>>>>>> 48e2a9d00fe6da60bdc5e157dd82647a351ac670
 
 set cursorline
 set expandtab
