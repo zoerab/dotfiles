@@ -31,12 +31,13 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'slim-template/vim-slim'
 Plugin 'benmills/vimux'
 Plugin 'sjl/vitality.vim'
+Plugin 'ryanoasis/vim-devicons'
 
 filetype plugin indent on
 
