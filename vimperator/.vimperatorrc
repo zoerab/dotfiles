@@ -1,5 +1,13 @@
-" .vimperatorrc
-" Zoerab Tchahkiev <zoerab.tchahkiev@gmail.com>
+"####################################################
+"                                                   #
+"         File:     .vimperatorrc                   #
+"         Category: DOTFILES                        #
+"         Author:   Zoerab Tchahkiev                #
+"         Link:     http://github.com/zoerab        #
+"         Version:  1.0                             #
+"         Revision: 12/2015                         #
+"                                                   #
+"####################################################
 
 " options
 " safe mode
