@@ -1,3 +1,14 @@
+#####################################################
+#                                                   #
+#         File:     .gitignore                      #
+#         Category: DOTFILES                        #
+#         Author:   Zoerab Tchahkiev                #
+#         Link:     http://github.com/zoerab        #
+#         Version:  1.0                             #
+#         Revision: 12/2015                         #
+#                                                   #
+#####################################################
+
 # Ignore everything by default
 *
 
