@@ -1,7 +1,0 @@
-" fmaps.vimp
-
-fmapc
-
-fmaps -u='(fastladder|reader\.livedoor)\.com/reader' j k s a p o q w r <Del> <C-d>,<Space> <C-u>,<S-Space> <,> >,< /,f
-
-" vim: ft=vimperator ts=4 sw=4 sts=0 et fdm=marker fdc=3
