@@ -134,6 +134,9 @@ noremap <tab> <c-w><c-w>
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Resize buffers
 if bufwinnr(1)
   nmap Ä <C-W><<C-W><
