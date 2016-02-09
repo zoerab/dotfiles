@@ -13,6 +13,13 @@
 *
 
 # Watch only these files and directories
+!atom/
+!atom/.atom/
+!atom/.atom/config.cson
+!atom/.atom/init.coffee
+!atom/.atom/keymap.cson
+!atom/.atom/snippets.cson
+!atom/.atom/styles.less
 !chrome/.cvimrc
 !chrome/
 !tmux/.tmux.conf
