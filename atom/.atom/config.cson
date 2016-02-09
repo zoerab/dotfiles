@@ -1,0 +1,41 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "48f014d6-7868-49ce-bb6f-fc4d96a7b028"
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+  autosave:
+    enabled: true
+  "color-picker":
+    automaticReplace: true
+    triggerKey: "K"
+    uppercaseColorValues: true
+  core:
+    disabledPackages: [
+      "linter-php"
+    ]
+  docblockr: {}
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "source code pro"
+    fontSize: 12
+    invisibles: {}
+    scrollPastEnd: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "bd30a6d8-f4dc-8c6e-aea1-35d02f6bb0c8"
+  "gist-it": {}
+  linter: {}
+  "linter-php":
+    executablePath: "/usr/bin/php"
+  minimap:
+    absoluteMode: true
+  pigments:
+    markerType: "gutter"
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+  welcome:
+    showOnStartup: false
