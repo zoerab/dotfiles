@@ -11,7 +11,6 @@
 
 # Ignore everything by default
 *
-atom/.atom/gist-it.token
 
 # Watch only these files and directories
 !chrome/.cvimrc
@@ -19,5 +18,3 @@ atom/.atom/gist-it.token
 !tmux/.tmux.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
-!atom/
-!atom/.atom/
