@@ -23,6 +23,7 @@
     showInvisibles: true
   "exception-reporting":
     userId: "bd30a6d8-f4dc-8c6e-aea1-35d02f6bb0c8"
+  gist: {}
   "gist-it": {}
   linter: {}
   "linter-php":
