@@ -14,11 +14,11 @@
 
 # Watch only these files and directories
 !atom/
-!atom/.atom/config.cson
-!atom/.atom/init.coffee
-!atom/.atom/keymap.cson
-!atom/.atom/snippets.cson
-!atom/.atom/styles.less
+!atom/config.cson
+!atom/init.coffee
+!atom/keymap.cson
+!atom/snippets.cson
+!atom/styles.less
 !chrome/.cvimrc
 !chrome/
 !tmux/.tmux.conf
