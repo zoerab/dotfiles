@@ -30,8 +30,7 @@
     executablePath: "/usr/bin/php"
   minimap:
     absoluteMode: true
-  pigments:
-    markerType: "gutter"
+  pigments: {}
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
