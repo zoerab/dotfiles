@@ -13,6 +13,10 @@
     disabledPackages: [
       "linter-php"
     ]
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
   docblockr: {}
   editor:
     backUpBeforeSaving: true
@@ -25,7 +29,14 @@
     userId: "bd30a6d8-f4dc-8c6e-aea1-35d02f6bb0c8"
   gist: {}
   "gist-it": {}
-  linter: {}
+  linter:
+    showErrorPanel: false
+  "linter-jscs":
+    fixOnSave: true
+    preset: "google"
+  "linter-jshint":
+    lintInlineJavaScript: true
+    lintJSXFiles: true
   "linter-php":
     executablePath: "/usr/bin/php"
   minimap:
