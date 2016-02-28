@@ -12,6 +12,10 @@
   core:
     disabledPackages: [
       "linter-php"
+      "minimap"
+      "linter-jshint"
+      "linter-jscs"
+      "javascript-snippets"
     ]
     themes: [
       "one-light-ui"
