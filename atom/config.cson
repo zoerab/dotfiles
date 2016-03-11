@@ -18,8 +18,8 @@
       "javascript-snippets"
     ]
     themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
+      "atom-dark-ui"
+      "atom-material-syntax-dark"
     ]
   docblockr: {}
   editor:
