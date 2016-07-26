@@ -1,24 +1,14 @@
-"####################################################
-"                                                   #
-"         File:     .vimrc                          #
-"         Category: DOTFILES                        #
-"         Author:   Zoerab Tchahkiev                #
-"         Link:     http://github.com/zoerab        #
-"         Version:  1.0                             #
-"         Revision: 11/2015                         #
-"                                                   #
-"####################################################
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" General settings
-set nocompatible
-filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+" call vundle#begin('~/some/path/here')
 
-" Initialize vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
 Plugin 'tpope/vim-sensible'
@@ -27,7 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
@@ -46,7 +36,7 @@ let mapleader=","
 let g:mapleader=","
 
 " VIM current theme
-color adam
+"color delek
 
 set cursorline
 set expandtab
@@ -67,6 +57,7 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
+syntax on
 
 " Arrows are evil
 nnoremap <up> <nop>
