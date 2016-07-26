@@ -9,15 +9,3 @@
 # atom.workspace.observeTextEditors (editor) ->
 #   editor.onDidSave ->
 #     console.log "Saved! #{editor.getPath()}"
-
-atom.commands.add 'atom-text-editor', 'activate-normal-mode-if-preceded-by-j': (e) ->
-    editor = @getModel()
-    pos = editor.getCursorBufferPosition()
-    range = [pos.traverse([0,-1]), pos]
-    console.log(range)
-    lastChar = editor.getTextInBufferRange(range)
-    if lastChar != "j"
-        e.abortKeyBinding()
-    else
-        editor.backspace()
-        atom.commands.dispatch(e.currentTarget, 'vim-mode:activate-normal-mode')

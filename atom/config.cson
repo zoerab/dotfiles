@@ -1,56 +1,123 @@
 "*":
   "atom-beautify":
-    _analyticsUserId: "48f014d6-7868-49ce-bb6f-fc4d96a7b028"
+    general:
+      _analyticsUserId: "39f20d87-15cd-484a-b48b-0d98d6084236"
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 205
+        green: 220
+        blue: 57
+        alpha: 1
+      accentColor:
+        red: 115
+        green: 127
+        blue: 16
+        alpha: 1
+      predefinedColor: "Lime"
+    fonts:
+      fontSize: 15
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      animations: false
+      panelContrast: true
+      panelShadows: true
+  "autocomplete-modules":
+    vendors: [
+      "node_modules"
+      "resources"
+      "includes"
+    ]
   "autocomplete-plus":
     backspaceTriggersAutocomplete: true
-  autosave:
-    enabled: true
   "color-picker":
-    automaticReplace: true
-    triggerKey: "K"
-    uppercaseColorValues: true
+    abbreviateValues: true
+  "config-import-export":
+    defaultPath:
+      darwin: "/Users/tchahkievz/AtomBackups"
+      freebsd: ""
+      linux: ""
+      sunos: ""
+      win32: ""
   core:
     disabledPackages: [
-      "linter-php"
       "minimap"
-      "linter-jshint"
-      "linter-jscs"
-      "javascript-snippets"
+      "minimap-highlight-selected"
+      "metrics"
+      "language-gitignore"
+      "markdown-preview"
     ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "node_modules"
+      "vendor"
+    ]
+    projectHome: "/Users/tchahkievz/Documents/Projects"
     themes: [
-      "atom-dark-ui"
-      "atom-material-syntax-dark"
+      "atom-material-ui"
+      "atom-material-syntax"
     ]
-  docblockr: {}
+  "custom-title":
+    template: "<%= projectName %> <% if (relativeFilePath) { %>- <%= relativeFilePath %> <% } %> - <%= gitHead %>"
+  docblockr:
+    newline_after_block: true
   editor:
-    backUpBeforeSaving: true
-    fontFamily: "source code pro"
-    fontSize: 12
-    invisibles: {}
+    fontSize: 11
     scrollPastEnd: true
     showInvisibles: true
+  emmet:
+    useEmmetComments: true
   "exception-reporting":
-    userId: "bd30a6d8-f4dc-8c6e-aea1-35d02f6bb0c8"
-  gist: {}
-  "gist-it": {}
-  linter:
-    showErrorPanel: false
-  "linter-jscs":
-    fixOnSave: true
-    preset: "google"
-  "linter-jshint":
-    lintInlineJavaScript: true
-    lintJSXFiles: true
-  "linter-php":
-    executablePath: "/usr/bin/php"
+    userId: "9b4c8554-6cd1-0c7c-6338-f57f51ddde80"
+  "file-icons": {}
+  "find-and-replace":
+    closeFindPanelAfterSearch: true
+    openProjectFindResultsInRightPane: true
+  "fuzzy-finder":
+    preserveLastSearch: true
+    searchAllPanes: true
+  "highlight-line":
+    enableSelectionBorder: true
+    enableUnderline: true
+    underline: "dashed"
+  "highlight-selected":
+    hideHighlightOnSelectedWord: true
+    highlightBackground: true
+    lightTheme: true
+    onlyHighlightWholeWords: false
+  "markdown-preview-plus":
+    enableLatexRenderingByDefault: true
   minimap:
-    absoluteMode: true
-  pigments: {}
-  "tree-view":
-    hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
+    displayCodeHighlights: false
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  pigments:
+    extendAutocompleteToColorValue: true
+    extendAutocompleteToVariables: true
+  "project-manager":
+    sortBy: "group"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
+  tabs:
+    enableVcsColoring: true
+  "tree-view": {}
   "vim-mode":
-    useClipboardAsDefaultRegister: true
-    useSmartcaseForSearch: true
+    startInInsertMode: true
+    wrapLeftRightMotion: true
+  "w3c-validation":
+    useFoldModeAsDefault: true
   welcome:
     showOnStartup: false
