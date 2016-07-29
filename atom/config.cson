@@ -121,5 +121,6 @@
     wrapLeftRightMotion: true
   "w3c-validation":
     useFoldModeAsDefault: true
+    validateOnSave: false
   welcome:
     showOnStartup: false
