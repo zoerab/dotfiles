@@ -51,6 +51,7 @@
       "metrics"
       "language-gitignore"
       "markdown-preview"
+      "config-import-export"
     ]
     ignoredNames: [
       ".git"
@@ -113,6 +114,11 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  "sync-settings":
+    _analyticsUserId: "7c8d27c9-0d63-4609-a9ac-1c74c35ce06d"
+    _lastBackupHash: "561df0a37d48739fee59278652957961f3faf0dc"
+    gistId: "1eb175a2baaa6fe82377423c62872b85"
+    personalAccessToken: "d7cfbb4793d34651d44229ccd55589839b1e11de"
   tabs:
     enableVcsColoring: true
   "tree-view": {}
