@@ -116,9 +116,9 @@
     syncHorizontalScroll: true
   "sync-settings":
     _analyticsUserId: "7c8d27c9-0d63-4609-a9ac-1c74c35ce06d"
-    _lastBackupHash: "561df0a37d48739fee59278652957961f3faf0dc"
+    _lastBackupHash: "d2fed651ee104ec60dcae34dc00d4b8b024a711b"
     gistId: "1eb175a2baaa6fe82377423c62872b85"
-    personalAccessToken: "d7cfbb4793d34651d44229ccd55589839b1e11de"
+    personalAccessToken: "7a3412ec9ea74225b35e409375b6db44a9615894"
   tabs:
     enableVcsColoring: true
   "tree-view": {}
