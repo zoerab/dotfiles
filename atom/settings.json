@@ -1,0 +1,165 @@
+{
+	"advanced-open-file": {
+		"createDirectories": true
+	},
+	"atom-beautify": {
+		"general": {
+			"_analyticsUserId": "39f20d87-15cd-484a-b48b-0d98d6084236"
+		}
+	},
+	"atom-material-ui": {
+		"colors": {
+			"abaseColor": {
+				"red": 205,
+				"green": 220,
+				"blue": 57,
+				"alpha": 1
+			},
+			"accentColor": {
+				"red": 115,
+				"green": 127,
+				"blue": 16,
+				"alpha": 1
+			},
+			"predefinedColor": "Lime"
+		},
+		"fonts": {
+			"fontSize": 15
+		},
+		"tabs": {
+			"compactTabs": true
+		},
+		"treeView": {
+			"compactList": true
+		},
+		"ui": {
+			"animations": false,
+			"panelContrast": true,
+			"panelShadows": true
+		}
+	},
+	"autocomplete-modules": {
+		"vendors": [
+			"node_modules",
+			"resources",
+			"includes"
+		]
+	},
+	"autocomplete-plus": {
+		"backspaceTriggersAutocomplete": true
+	},
+	"color-picker": {
+		"abbreviateValues": true
+	},
+	"config-import-export": {
+		"defaultPath": {
+			"darwin": "/Users/tchahkievz/AtomBackups",
+			"freebsd": "",
+			"linux": "",
+			"sunos": "",
+			"win32": ""
+		}
+	},
+	"core": {
+		"disabledPackages": [
+			"minimap",
+			"minimap-highlight-selected",
+			"metrics",
+			"language-gitignore",
+			"markdown-preview",
+			"config-import-export"
+		],
+		"ignoredNames": [
+			".git",
+			".hg",
+			".svn",
+			".DS_Store",
+			"._*",
+			"Thumbs.db",
+			"node_modules",
+			"vendor"
+		],
+		"projectHome": "/Users/tchahkievz/Documents/Projects",
+		"themes": [
+			"atom-material-ui",
+			"atom-material-syntax"
+		]
+	},
+	"custom-title": {
+		"template": "<%= projectName %> <% if (relativeFilePath) { %>- <%= relativeFilePath %> <% } %> - <%= gitHead %>"
+	},
+	"docblockr": {
+		"newline_after_block": true
+	},
+	"editor": {
+		"fontSize": 11,
+		"scrollPastEnd": true,
+		"showInvisibles": true
+	},
+	"emmet": {
+		"useEmmetComments": true
+	},
+	"exception-reporting": {
+		"userId": "9b4c8554-6cd1-0c7c-6338-f57f51ddde80"
+	},
+	"file-icons": {},
+	"find-and-replace": {
+		"closeFindPanelAfterSearch": true,
+		"openProjectFindResultsInRightPane": true
+	},
+	"fuzzy-finder": {
+		"preserveLastSearch": true,
+		"searchAllPanes": true
+	},
+	"highlight-line": {
+		"enableSelectionBorder": true,
+		"enableUnderline": true,
+		"underline": "dashed"
+	},
+	"highlight-selected": {
+		"hideHighlightOnSelectedWord": true,
+		"highlightBackground": true,
+		"lightTheme": true,
+		"onlyHighlightWholeWords": false
+	},
+	"markdown-preview-plus": {
+		"enableLatexRenderingByDefault": true
+	},
+	"minimap": {
+		"displayCodeHighlights": false,
+		"plugins": {
+			"highlight-selected": true,
+			"highlight-selectedDecorationsZIndex": 0
+		}
+	},
+	"pigments": {
+		"extendAutocompleteToColorValue": true,
+		"extendAutocompleteToVariables": true
+	},
+	"project-manager": {
+		"sortBy": "group"
+	},
+	"split-diff": {
+		"diffWords": true,
+		"ignoreWhitespace": true,
+		"leftEditorColor": "red",
+		"rightEditorColor": "green",
+		"syncHorizontalScroll": true
+	},
+	"sync-settings": {},
+	"tabs": {
+		"enableVcsColoring": true
+	},
+	"tree-view": {},
+	"vim-mode": {
+		"startInInsertMode": true,
+		"wrapLeftRightMotion": true
+	},
+	"w3c-validation": {
+		"useFoldModeAsDefault": true,
+		"validateOnSave": false
+	},
+	"welcome": {
+		"showOnStartup": false
+	}
+}
