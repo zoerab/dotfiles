@@ -23,6 +23,8 @@
 !atom/styles.less
 !chrome/.cvimrc
 !chrome/
+!git/
+!git/.gitconfig
 !tmux/.tmux.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
