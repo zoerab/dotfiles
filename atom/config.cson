@@ -73,7 +73,7 @@
   docblockr:
     newline_after_block: true
   editor:
-    fontSize: 11
+    fontSize: 12
     scrollPastEnd: true
     showInvisibles: true
   emmet:
@@ -116,9 +116,9 @@
     syncHorizontalScroll: true
   "sync-settings":
     _analyticsUserId: "7c8d27c9-0d63-4609-a9ac-1c74c35ce06d"
-    _lastBackupHash: "d2fed651ee104ec60dcae34dc00d4b8b024a711b"
+    _lastBackupHash: "1615d0580bb74c775e04a66cc2521502e83dec97"
     gistId: "1eb175a2baaa6fe82377423c62872b85"
-    personalAccessToken: "7a3412ec9ea74225b35e409375b6db44a9615894"
+    personalAccessToken: "25e6364e8cdd5ba54fede605d40d4ba9ad4b6211"
   tabs:
     enableVcsColoring: true
   "tree-view": {}
@@ -130,3 +130,7 @@
     validateOnSave: false
   welcome:
     showOnStartup: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
