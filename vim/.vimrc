@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
 Plugin 'tpope/vim-sensible'
-Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
@@ -28,6 +27,24 @@ Plugin 'slim-template/vim-slim'
 Plugin 'benmills/vimux'
 Plugin 'sjl/vitality.vim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'mattn/emmet-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 filetype plugin indent on
 
