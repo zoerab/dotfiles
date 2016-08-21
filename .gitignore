@@ -25,6 +25,8 @@
 !chrome/
 !git/
 !git/.gitconfig
+!nvim/
+!nvim/.nvimrc
 !tmux/.tmux.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
