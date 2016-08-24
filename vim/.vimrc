@@ -21,7 +21,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/syntastic'
@@ -37,7 +37,9 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 
 "-----------------------------------------------------"
 " End of plugins
@@ -56,7 +58,7 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme monokain 
 
 "-----------------------------------------------------"
 " Cursor tweaks
@@ -73,12 +75,14 @@ endif
 " Editor tweaks
 "-----------------------------------------------------"
 set expandtab
+set showmode
 set modelines=0
 set shiftwidth=2
 set clipboard=unnamed
 set synmaxcol=128
 set encoding=utf-8
 set tabstop=2
+set smarttab
 set nowrap
 set number
 set relativenumber
