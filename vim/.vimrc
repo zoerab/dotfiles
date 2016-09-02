@@ -34,8 +34,8 @@ Plugin 'slim-template/vim-slim'
 Plugin 'benmills/vimux'
 Plugin 'sjl/vitality.vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mattn/emmet-vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
@@ -94,6 +94,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set lazyredraw
 set backspace=indent,eol,start
 
 " Arrows are evil
