@@ -65,11 +65,11 @@ colorscheme monokain
 "-----------------------------------------------------"
 set cursorline
 
-set cursorcolumn
-highlight cursorline term=underline cterm=underline ctermbg=0 gui=underline guibg=NONE guisp=grey40
-if has("autocmd")
-  au BufEnter * set cursorline cursorcolumn
-endif
+"set cursorcolumn
+"highlight cursorline term=underline cterm=underline ctermbg=0 gui=underline guibg=NONE guisp=grey40
+"if has("autocmd")
+"  au BufEnter * set cursorline cursorcolumn
+"endif
 
 "-----------------------------------------------------"
 " Editor tweaks
