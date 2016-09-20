@@ -21,7 +21,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-commentary'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/syntastic'
@@ -40,6 +41,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
+Plugin 'mhartington/oceanic-next'
 
 "-----------------------------------------------------"
 " End of plugins
@@ -58,26 +60,24 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-colorscheme monokain 
-
-"-----------------------------------------------------"
-" Cursor tweaks
-"-----------------------------------------------------"
-set cursorline
-
-"set cursorcolumn
-"highlight cursorline term=underline cterm=underline ctermbg=0 gui=underline guibg=NONE guisp=grey40
-"if has("autocmd")
-"  au BufEnter * set cursorline cursorcolumn
-"endif
+colorscheme OceanicNext 
 
 "-----------------------------------------------------"
 " Editor tweaks
 "-----------------------------------------------------"
+set cursorline
+set pastetoggle=<F2>
 set expandtab
+set visualbell
+set noerrorbells
+set title
+set showmatch
+set autoindent
+set copyindent
 set showmode
 set modelines=0
 set shiftwidth=2
+set shiftround
 set clipboard=unnamed
 set synmaxcol=128
 set encoding=utf-8
@@ -94,18 +94,19 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set hidden
 set lazyredraw
 set backspace=indent,eol,start
 
 " Arrows are evil
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 "-----------------------------------------------------"
 " Automatic formatting
@@ -144,6 +145,13 @@ set fillchars=vert:\
 " Quick ESC
 "-----------------------------------------------------"
 imap jj <ESC>
+
+"-----------------------------------------------------"
+" Commenting the code
+"-----------------------------------------------------"
+nmap cm  <Plug>Commentary
+" `cml` works with the above, but I mistype it often
+nmap mcl <Plug>CommentaryLine
 
 "-----------------------------------------------------"
 " Save all files on focus lost, 
