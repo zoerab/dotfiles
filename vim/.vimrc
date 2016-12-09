@@ -22,9 +22,11 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
-Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mbbill/undotree'
@@ -60,7 +62,8 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-colorscheme OceanicNext 
+colorscheme 3dglasses 
+"colorscheme OceanicNext 
 
 "-----------------------------------------------------"
 " Editor tweaks
@@ -98,7 +101,9 @@ set hidden
 set lazyredraw
 set backspace=indent,eol,start
 
+"-----------------------------------------------------"
 " Arrows are evil
+"-----------------------------------------------------"
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -125,6 +130,19 @@ au BufRead,BufNewFile *.go set filetype=go
 " No show command
 "-----------------------------------------------------"
 autocmd VimEnter * set nosc
+
+"-----------------------------------------------------"
+" Toggle all buffers
+"-----------------------------------------------------"
+nnoremap <silent> <unique> <leader>b :BufExplorer<CR>
+
+
+"-----------------------------------------------------"
+" Moving selected blocks in Visual Block mode
+"-----------------------------------------------------"
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 
 "-----------------------------------------------------"
 " Enable mouse support in VIM, NeoVim might have issues
