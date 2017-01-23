@@ -28,5 +28,6 @@
 !nvim/
 !nvim/.nvimrc
 !tmux/.tmux.conf
+!tmux/.tmux.server.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
