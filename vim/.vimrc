@@ -47,6 +47,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mhartington/oceanic-next'
+Plugin 'arcticicestudio/nord-vim'
 
 
 "-----------------------------------------------------"
@@ -68,7 +69,8 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-colorscheme 3dglasses 
+colorscheme nord 
+"colorscheme 3dglasses 
 "colorscheme OceanicNext 
 
 
