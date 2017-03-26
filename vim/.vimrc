@@ -4,16 +4,19 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 "-----------------------------------------------------"
 " Set the runtime path to include Vundle & initialize
 "-----------------------------------------------------"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+
 "-----------------------------------------------------"
 " Let Vundle manage Vundle, required
 "-----------------------------------------------------"
 Plugin 'VundleVim/Vundle.vim'
+
 
 "-----------------------------------------------------"
 " My Plugins 
@@ -45,17 +48,20 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
 Plugin 'mhartington/oceanic-next'
 
+
 "-----------------------------------------------------"
 " End of plugins
 "-----------------------------------------------------"
 call vundle#end()
 filetype plugin indent on
 
+
 "-----------------------------------------------------"
 " Comma is now a leader
 "-----------------------------------------------------"
 let mapleader=","
 let g:mapleader=","
+
 
 "-----------------------------------------------------"
 " Themes
@@ -64,6 +70,23 @@ syntax enable
 set background=dark
 colorscheme 3dglasses 
 "colorscheme OceanicNext 
+
+
+"-----------------------------------------------------"
+" Airline configurations
+"-----------------------------------------------------"
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'dark'
+
+
+"-----------------------------------------------------"
+" Tmux integration with airline
+"-----------------------------------------------------"
+let g:airline#extensions#tmuxline#enabled = 0
+let g:tmuxline_theme = 'airline'
+let g:tmuxline_preset = 'full'
+
 
 "-----------------------------------------------------"
 " Editor tweaks
@@ -101,6 +124,7 @@ set hidden
 set lazyredraw
 set backspace=indent,eol,start
 
+
 "-----------------------------------------------------"
 " Arrows are evil
 "-----------------------------------------------------"
@@ -112,6 +136,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
 
 "-----------------------------------------------------"
 " Automatic formatting
@@ -126,10 +151,12 @@ autocmd BufWritePre *.slim :%s/\s\+$//e
 au BufNewFile * set noeol
 au BufRead,BufNewFile *.go set filetype=go
 
+
 "-----------------------------------------------------"
 " No show command
 "-----------------------------------------------------"
 autocmd VimEnter * set nosc
+
 
 "-----------------------------------------------------"
 " Toggle all buffers
@@ -159,10 +186,12 @@ endif
 "-----------------------------------------------------"
 set fillchars=vert:\ 
 
+
 "-----------------------------------------------------"
 " Quick ESC
 "-----------------------------------------------------"
 imap jj <ESC>
+
 
 "-----------------------------------------------------"
 " Commenting the code
@@ -171,11 +200,13 @@ nmap cm  <Plug>Commentary
 " `cml` works with the above, but I mistype it often
 nmap mcl <Plug>CommentaryLine
 
+
 "-----------------------------------------------------"
 " Save all files on focus lost, 
 " ignoring warnings about untitled buffers
 "-----------------------------------------------------"
 autocmd FocusLost * silent! wa
+
 
 "-----------------------------------------------------"
 " Easier split navigation (ctrl+j,h,k,l buttons)
@@ -185,10 +216,12 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
 "-----------------------------------------------------"
 " Quickedit vimrc file
 "-----------------------------------------------------"
 nmap <Leader>ev  :tabedit $MYVIMRC<cr>
+
 
 "-----------------------------------------------------"
 " Autosource vimrc on save
@@ -196,6 +229,7 @@ nmap <Leader>ev  :tabedit $MYVIMRC<cr>
 augroup autosourcing
   autocmd BufWritePost .vimrc source %
 augroup END
+
 
 "-----------------------------------------------------"
 " Jump to the next row on long lines
@@ -205,10 +239,12 @@ map <Up>   gk
 nnoremap j gj
 nnoremap k gk
 
+
 "-----------------------------------------------------"
 " Format the entire file
 "-----------------------------------------------------"
 nmap <leader>fef ggVG=
+
 
 "-----------------------------------------------------"
 " Open new buffers
@@ -218,25 +254,30 @@ nmap <leader>s<right>  :rightbelow vnew<cr>
 nmap <leader>s<up>     :leftabove  new<cr>
 nmap <leader>s<down>   :rightbelow new<cr>
 
+
 "-----------------------------------------------------"
 " Tab between buffers
 "-----------------------------------------------------"
 noremap <tab> <c-w><c-w>
+
 
 "-----------------------------------------------------"
 " Disable search highlight
 "-----------------------------------------------------"
 nmap <Leader><space>  :nohlsearch<cr>
 
+
 "-----------------------------------------------------"
 " Switch between last two buffers
 "-----------------------------------------------------"
 nnoremap <leader><leader> <C-^>
 
+
 "-----------------------------------------------------"
 " Saving files in SUDO mode
 "-----------------------------------------------------"
 cmap w!! w !sudo tee > /dev/null %
+
 
 "-----------------------------------------------------"
 " NERDTree
@@ -246,6 +287,7 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 let NERDTreeShowHidden=1
 nmap <silent> <leader>y :NERDTreeFind<cr>
+
 
 "-----------------------------------------------------"
 " CtrlP
@@ -258,6 +300,7 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
+
 "-----------------------------------------------------"
 " Fugitive Shortcuts
 "-----------------------------------------------------"
@@ -267,15 +310,18 @@ nmap <silent><leader>gb :Gblame<cr>
 nmap <leader>m :MarkedOpen!<cr>
 nmap <leader>mq :MarkedQuit<cr>
 
+
 "-----------------------------------------------------"
 " Toggle Syntastic
 "-----------------------------------------------------"
 nmap <leader>s :SyntasticToggleMode<cr>
 
+
 "-----------------------------------------------------"
 " Emmet config
 "-----------------------------------------------------"
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 
 "-----------------------------------------------------"
 " Undotree configurations
@@ -286,19 +332,6 @@ if has("persistent_undo")
   set undofile
 endif
 
-"-----------------------------------------------------"
-" Airline configurations
-"-----------------------------------------------------"
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'dark'
-
-"-----------------------------------------------------"
-" Tmux integration with airline
-"-----------------------------------------------------"
-let g:airline#extensions#tmuxline#enabled = 0
-let g:tmuxline_theme = 'airline'
-let g:tmuxline_preset = 'full'
 
 "-----------------------------------------------------"
 " Quit with :Q
