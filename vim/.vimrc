@@ -25,7 +25,6 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'vim-airline/vim-airline'
@@ -43,10 +42,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/emmet-vim'
 Plugin 'ternjs/tern_for_vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
-Plugin 'mhartington/oceanic-next'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'arcticicestudio/nord-vim'
 
 
@@ -79,7 +75,9 @@ colorscheme nord
 "-----------------------------------------------------"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = 'dark'
+"let g:airline_theme = 'dark'
+"let g:airline_theme = 'luna'
+let g:airline_theme = 'laederon'
 
 
 "-----------------------------------------------------"
@@ -145,7 +143,6 @@ inoremap <right> <nop>
 "-----------------------------------------------------"
 autocmd BufWritePre *.rb :%s/\s\+$//e
 autocmd BufWritePre *.go :%s/\s\+$//e
-autocmd BufWritePre *.haml :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e
 autocmd BufWritePre *.slim :%s/\s\+$//e
@@ -339,3 +336,4 @@ endif
 " Quit with :Q
 "-----------------------------------------------------"
 command -nargs=0 Quit :qa!
+
