@@ -40,8 +40,9 @@ Plugin 'benmills/vimux'
 Plugin 'sjl/vitality.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mattn/emmet-vim'
+"Plugin 'mattn/emmet-vim'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'arcticicestudio/nord-vim'
 
@@ -66,8 +67,6 @@ let g:mapleader=","
 syntax enable
 set background=dark
 colorscheme nord 
-"colorscheme 3dglasses 
-"colorscheme OceanicNext 
 
 
 "-----------------------------------------------------"
