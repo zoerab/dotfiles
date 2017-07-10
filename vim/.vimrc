@@ -6,53 +6,47 @@ filetype off                  " required
 
 
 "-----------------------------------------------------"
-" Set the runtime path to include Vundle & initialize
+" Initiate PLUG
 "-----------------------------------------------------"
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-
-"-----------------------------------------------------"
-" Let Vundle manage Vundle, required
-"-----------------------------------------------------"
-Plugin 'VundleVim/Vundle.vim'
-
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
 "-----------------------------------------------------"
-" My Plugins 
+" My Plugins (use single quotes only)
 "-----------------------------------------------------"
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-commentary'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mbbill/undotree'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'slim-template/vim-slim'
-Plugin 'benmills/vimux'
-Plugin 'sjl/vitality.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'pangloss/vim-javascript'
-Plugin 'fatih/vim-go'
-"Plugin 'mattn/emmet-vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'edkolev/tmuxline.vim'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'slim-template/vim-slim'
+Plug 'benmills/vimux'
+Plug 'sjl/vitality.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'pangloss/vim-javascript', {'for': ['js','ts','es']}
+Plug 'fatih/vim-go', {'for': 'go'}
+Plug 'mattn/emmet-vim', { 'for': ['html','css','sass','scss']}
+Plug 'ternjs/tern_for_vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
 
 
 "-----------------------------------------------------"
 " End of plugins
 "-----------------------------------------------------"
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 
 "-----------------------------------------------------"
