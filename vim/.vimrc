@@ -40,6 +40,7 @@ Plugin 'benmills/vimux'
 Plugin 'sjl/vitality.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'pangloss/vim-javascript'
+Plugin 'fatih/vim-go'
 "Plugin 'mattn/emmet-vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -96,6 +97,7 @@ set expandtab
 set visualbell
 set noerrorbells
 set title
+set autoread
 set showmatch
 set autoindent
 set copyindent
@@ -148,6 +150,7 @@ autocmd BufWritePre *.slim :%s/\s\+$//e
 
 au BufNewFile * set noeol
 au BufRead,BufNewFile *.go set filetype=go
+au CursorHold * checktime
 
 
 "-----------------------------------------------------"
@@ -179,6 +182,7 @@ if has('mouse')
   endif
 endif
 
+
 "-----------------------------------------------------"
 " Space character in vertical splitt line
 "-----------------------------------------------------"
@@ -195,12 +199,13 @@ imap jj <ESC>
 " Commenting the code
 "-----------------------------------------------------"
 nmap cm  <Plug>Commentary
-" `cml` works with the above, but I mistype it often
+nmap cml <Plug>CommentaryLine
 nmap mcl <Plug>CommentaryLine
 
 
 "-----------------------------------------------------"
 " Save all files on focus lost, 
+"autocmd FocusLost * :wa
 " ignoring warnings about untitled buffers
 "-----------------------------------------------------"
 autocmd FocusLost * silent! wa
@@ -318,7 +323,7 @@ nmap <leader>s :SyntasticToggleMode<cr>
 "-----------------------------------------------------"
 " Emmet config
 "-----------------------------------------------------"
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 
 "-----------------------------------------------------"
@@ -329,6 +334,8 @@ if has("persistent_undo")
   set undodir=~/.undodir/
   set undofile
 endif
+" Window layout style
+let g:undotree_WindowLayout = 4
 
 
 "-----------------------------------------------------"
