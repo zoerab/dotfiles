@@ -21,23 +21,19 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'edkolev/tmuxline.vim'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'mbbill/undotree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
-Plug 'kana/vim-textobj-user'
-Plug 'slim-template/vim-slim'
-Plug 'benmills/vimux'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pangloss/vim-javascript', {'for': ['js','ts','es']}
+Plug 'ternjs/tern_for_vim', {'for': ['js','ts','es']}
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'mattn/emmet-vim', { 'for': ['html','css','sass','scss']}
-Plug 'ternjs/tern_for_vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -281,22 +277,37 @@ cmap w!! w !sudo tee > /dev/null %
 "-----------------------------------------------------"
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
+let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg', '.DS_Store']
 let NERDTreeShowHidden=1
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
-
 "-----------------------------------------------------"
-" CtrlP
+" FZF
 "-----------------------------------------------------"
-nnoremap <silent> t :CtrlP<cr>
-nmap <silent> <leader>r :CtrlPBuffer<cr>
-let g:ctrlp_dotfiles=1
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 5
+if has_key(g:plugs, 'fzf.vim')
+  nnoremap <Leader>b :Buffers<CR>
+  nnoremap <Leader>c :Commands<CR>
+  nnoremap <Leader>l :BLines<CR>
+  nnoremap <C-p> :Files<CR>
+endif
+" Use ripgrep instead of grepprg 
+set grepprg=rg\ --vimgrep
+" Searching tweaks
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+" --color: Search color options
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
+" Preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
 "-----------------------------------------------------"
 " Fugitive Shortcuts
@@ -317,7 +328,7 @@ nmap <leader>s :SyntasticToggleMode<cr>
 "-----------------------------------------------------"
 " Emmet config
 "-----------------------------------------------------"
-"imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 
 "-----------------------------------------------------"
