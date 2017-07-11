@@ -11,7 +11,7 @@ git clone https://github.com/zoerab/dotfiles.git ~/dotfiles
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 ```
-ln -s ~/dotfiles/tmux/.tmux.conf ~
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 Run `tmux` and press **prefix + I** (capital I, as in Install) to fetch all plugins.
 
@@ -21,7 +21,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 ```
-ln -s ~/dotfiles/vim/.vimrc ~
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ```
 Start Vim and `:PlugInstall` to install plugins
 
