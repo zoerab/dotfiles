@@ -23,17 +23,18 @@ Plug 'tpope/vim-commentary'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'mbbill/undotree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'junegunn/fzf.vim'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'pangloss/vim-javascript', {'for': ['js','ts','es']}
-Plug 'ternjs/tern_for_vim', {'for': ['js','ts','es']}
-Plug 'fatih/vim-go', {'for': 'go'}
-Plug 'mattn/emmet-vim', { 'for': ['html','css','sass','scss']}
+Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
+Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'pangloss/vim-javascript',         {'for': ['js','ts','es']}
+Plug 'ternjs/tern_for_vim',             {'for': ['js','ts','es']}
+Plug 'fatih/vim-go',                    {'for': 'go', 'do': ':GoInstallBinaries'}
+Plug 'nsf/gocode',                      { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
+Plug 'mattn/emmet-vim',                 { 'for': ['html','css','sass','scss']}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
@@ -253,12 +254,24 @@ nmap <leader>s<down>   :rightbelow new<cr>
 "-----------------------------------------------------"
 noremap <tab> <c-w><c-w>
 
+"-----------------------------------------------------"
+" Go-vim
+"-----------------------------------------------------"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 "-----------------------------------------------------"
 " Disable search highlight
 "-----------------------------------------------------"
 nmap <Leader><space>  :nohlsearch<cr>
 
+
+"-----------------------------------------------------"
+" Neocomplete
+"-----------------------------------------------------"
 
 "-----------------------------------------------------"
 " Switch between last two buffers
@@ -288,6 +301,7 @@ if has_key(g:plugs, 'fzf.vim')
   nnoremap <Leader>b :Buffers<CR>
   nnoremap <Leader>c :Commands<CR>
   nnoremap <Leader>l :BLines<CR>
+  nnoremap <Leader>f :Rg<CR>
   nnoremap <C-p> :Files<CR>
 endif
 " Use ripgrep instead of grepprg 
@@ -304,8 +318,14 @@ set grepprg=rg\ --vimgrep
 " --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 " --color: Search color options
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
-
-" Preview window
+" Using ripgrep with fzf
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+" File privew window on the right
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
@@ -328,7 +348,9 @@ nmap <leader>s :SyntasticToggleMode<cr>
 "-----------------------------------------------------"
 " Emmet config
 "-----------------------------------------------------"
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+if exists(":emmet-vim")
+  imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+endif
 
 
 "-----------------------------------------------------"
