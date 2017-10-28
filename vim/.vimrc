@@ -24,12 +24,12 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
-Plug 'junegunn/fzf.vim'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Valloric/YouCompleteMe'
-Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
 Plug 'pangloss/vim-javascript',         {'for': ['js','ts','es']}
 Plug 'ternjs/tern_for_vim',             {'for': ['js','ts','es']}
 Plug 'fatih/vim-go',                    {'for': 'go', 'do': ':GoInstallBinaries'}
@@ -327,7 +327,7 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 " File privew window on the right
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
 
 "-----------------------------------------------------"
 " Fugitive Shortcuts
