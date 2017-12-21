@@ -37,7 +37,7 @@ Plug 'nsf/gocode',                      { 'rtp': 'vim', 'do': '~/.vim/plugged/go
 Plug 'mattn/emmet-vim',                 { 'for': ['html','css','sass','scss']}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
+Plug 'morhetz/gruvbox'
 
 
 "-----------------------------------------------------"
@@ -58,7 +58,8 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-colorscheme nord 
+" set background=light
+colorscheme gruvbox
 
 
 "-----------------------------------------------------"
@@ -68,8 +69,14 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_theme = 'dark'
 "let g:airline_theme = 'luna'
-let g:airline_theme = 'laederon'
+"let g:airline_theme = 'laederon'
+let g:airline_theme = 'gruvbox'
 
+"-----------------------------------------------------"
+" Spell check settings
+"-----------------------------------------------------"
+:hi clear SpellBad
+:hi SpellBad cterm=underline ctermfg=red
 
 "-----------------------------------------------------"
 " Tmux integration with airline
@@ -83,6 +90,7 @@ let g:tmuxline_preset = 'full'
 " Editor tweaks
 "-----------------------------------------------------"
 set cursorline
+set cursorcolumn
 set pastetoggle=<F2>
 set expandtab
 set visualbell
