@@ -39,7 +39,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 
-
 "-----------------------------------------------------"
 " End of plugins
 "-----------------------------------------------------"
@@ -58,18 +57,16 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-" set background=light
+let g:gruvbox_contrast_dark = 'hard'
+"set background=light
+"let g:gruvbox_contrast_light = 'hard'
 colorscheme gruvbox
-
 
 "-----------------------------------------------------"
 " Airline configurations
 "-----------------------------------------------------"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme = 'dark'
-"let g:airline_theme = 'luna'
-"let g:airline_theme = 'laederon'
 let g:airline_theme = 'gruvbox'
 
 "-----------------------------------------------------"
