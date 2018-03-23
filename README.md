@@ -6,7 +6,7 @@
 ```
 git clone https://github.com/zoerab/dotfiles.git ~/dotfiles
 ```
-* Tmux and TMP
+* Tmux and TPM
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
