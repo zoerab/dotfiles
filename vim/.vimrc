@@ -30,11 +30,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
-Plug 'pangloss/vim-javascript',         {'for': ['js','ts','es']}
-Plug 'ternjs/tern_for_vim',             {'for': ['js','ts','es']}
 Plug 'fatih/vim-go',                    {'for': 'go', 'do': ':GoInstallBinaries'}
 Plug 'nsf/gocode',                      { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
-Plug 'mattn/emmet-vim',                 { 'for': ['html','css','sass','scss']}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
@@ -134,20 +131,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-
-"-----------------------------------------------------"
-" Automatic formatting
-"-----------------------------------------------------"
-autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.go :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
-autocmd BufWritePre *.scss :%s/\s\+$//e
-autocmd BufWritePre *.slim :%s/\s\+$//e
-
-au BufNewFile * set noeol
-au BufRead,BufNewFile *.go set filetype=go
-au CursorHold * checktime
 
 
 "-----------------------------------------------------"
@@ -260,24 +243,12 @@ nmap <leader>s<down>   :rightbelow new<cr>
 "-----------------------------------------------------"
 noremap <tab> <c-w><c-w>
 
-"-----------------------------------------------------"
-" Go-vim
-"-----------------------------------------------------"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
 
 "-----------------------------------------------------"
 " Disable search highlight
 "-----------------------------------------------------"
 nmap <Leader><space>  :nohlsearch<cr>
 
-
-"-----------------------------------------------------"
-" Neocomplete
-"-----------------------------------------------------"
 
 "-----------------------------------------------------"
 " Switch between last two buffers
@@ -288,7 +259,8 @@ nnoremap <leader><leader> <C-^>
 "-----------------------------------------------------"
 " Saving files in SUDO mode
 "-----------------------------------------------------"
-cmap w!! w !sudo tee > /dev/null %
+"cmap fuck w !sudo tee > /dev/null %
+com! W w !sudo tee % > /dev/null
 
 
 "-----------------------------------------------------"
@@ -349,14 +321,6 @@ nmap <leader>mq :MarkedQuit<cr>
 " Toggle Syntastic
 "-----------------------------------------------------"
 nmap <leader>s :SyntasticToggleMode<cr>
-
-
-"-----------------------------------------------------"
-" Emmet config
-"-----------------------------------------------------"
-if exists(":emmet-vim")
-  imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-endif
 
 
 "-----------------------------------------------------"
