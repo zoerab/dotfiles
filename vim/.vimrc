@@ -26,6 +26,7 @@ Plug 'mbbill/undotree'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Valloric/YouCompleteMe'
+Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
@@ -117,7 +118,7 @@ set smartcase
 set hidden
 set lazyredraw
 set backspace=indent,eol,start
-
+set listchars=tab:▏\ ,trail:~,eol:¬
 
 "-----------------------------------------------------"
 " Arrows are evil
