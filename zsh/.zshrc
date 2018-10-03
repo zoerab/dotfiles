@@ -8,7 +8,7 @@ export ZSH="/Users/zee/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="alien/alien"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -155,6 +155,7 @@ export VISUAL=/usr/local/bin/vim
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export ALIEN_THEME="gruvbox"
+export ALIEN_DATE_TIME_FORMAT=%H:%M:%S # default is %r
 export USE_NERD_FONT=1
-source ~/alien/alien.zsh
+# source ~/alien/alien.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
