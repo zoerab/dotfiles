@@ -13,14 +13,6 @@
 *
 
 # Watch only these files and directories
-!atom/
-!atom/config.cson
-!atom/init.coffee
-!atom/keymap.cson
-!atom/packages.json
-!atom/settings.json
-!atom/snippets.cson
-!atom/styles.less
 !chrome/.cvimrc
 !chrome/
 !git/
@@ -31,3 +23,5 @@
 !tmux/.tmux.server.conf
 !vim/.vimrc
 !vimperator/.vimperatorrc
+!zsh/
+!zsh/.zshrc
