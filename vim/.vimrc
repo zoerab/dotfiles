@@ -25,7 +25,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Valloric/YouCompleteMe'
 Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
@@ -101,7 +100,7 @@ set shiftwidth=2
 set shiftround
 set clipboard=unnamed
 set synmaxcol=128
-set encoding=utf-8
+set encoding=UTF-8
 set tabstop=2
 set smarttab
 set nowrap
