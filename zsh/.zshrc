@@ -65,6 +65,7 @@ ZSH_THEME="alien/alien"
 plugins=(
   git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 	z
 )
 
