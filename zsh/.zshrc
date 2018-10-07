@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/zee/.oh-my-zsh"
@@ -104,14 +104,12 @@ alias top='top'
 alias vi='vim'
 alias tree='tree -a'
 alias extip='curl ipecho.net/plain; echo'
-alias intip='ipconfig getifaddr en1'
+alias intip='ipconfig getifaddr en0 || ipconfig getifaddr en1'
 alias htop='sudo htop'
 alias bt='wget http://cachefly.cachefly.net/100mb.test -O /dev/null'
 alias 4chan-dl='wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress'
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
 alias 8888="ping 8.8.8.8"
-alias zshconfig="vim ~/.zshrc"
-alias zshsource="source ~/.zshrc"
 alias fuck="git reset --hard && git clean -df"
 alias gs="git status"
 alias gaa="git add ."
