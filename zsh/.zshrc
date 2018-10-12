@@ -99,43 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll='ls -alh'
-alias top='top'
-alias vi='vim'
-alias tree='tree -a'
-alias extip='curl ipecho.net/plain; echo'
-alias intip='ipconfig getifaddr en0 || ipconfig getifaddr en1'
-alias htop='sudo htop'
-alias bt='wget http://cachefly.cachefly.net/100mb.test -O /dev/null'
-alias 4chan-dl='wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress'
-alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
-alias 8888="ping 8.8.8.8"
-alias fuck="git reset --hard && git clean -df"
-alias gs="git status"
-alias gaa="git add ."
-alias gc="git commit -m "
-alias gp="git push"
-alias gl="git log"
-alias ghist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
-alias ghistlog="log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
-alias dirs="dirs -v"
-alias mv='mv -i'
-alias cp='cp -i'
-alias rm='rm -i'
-alias df='df -h'
-alias mkdir='mkdir -p'
-alias pbsort='pbpaste | sort | pbcopy'
+. $ZSH_CUSTOM/.aliases
 
-# Showing weather
-weather(){
-  curl -4 http://wttr.in/$1 
-}
-
-# Auto list files in directory once in it
-function chpwd() {
-    emulate -L zsh
-    ls -alh
-}
 
 # Ignoring duplicate commands in history
 export HISTCONTROL=ignoredups
