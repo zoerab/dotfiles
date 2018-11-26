@@ -17,7 +17,7 @@ alias gc="git commit -m "
 alias gp="git push"
 alias gl="git log"
 alias ghist="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
-alias ghistlog="log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
+alias ghistlog="git log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative"
 alias dirs="dirs -v"
 alias mv='mv -i'
 alias cp='cp -i'

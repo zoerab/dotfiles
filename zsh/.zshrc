@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. $ZSH_CUSTOM/.aliases
+. $HOME/.aliases
 
 
 # Ignoring duplicate commands in history
@@ -121,4 +121,5 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 export ALIEN_THEME="gruvbox"
 export ALIEN_DATE_TIME_FORMAT=%H:%M:%S # default is %r
 export USE_NERD_FONT=1
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
