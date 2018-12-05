@@ -24,6 +24,7 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias df='df -h'
 alias mkdir='mkdir -p'
+alias mtr='sudo mtr'
 alias pbsort='pbpaste | sort | pbcopy'
 
 # Showing weather
