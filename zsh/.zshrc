@@ -121,5 +121,6 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 export ALIEN_THEME="gruvbox"
 export ALIEN_DATE_TIME_FORMAT=%H:%M:%S # default is %r
 export USE_NERD_FONT=1
+export LANG="en_US.UTF-8"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
