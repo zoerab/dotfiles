@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
@@ -54,7 +55,7 @@ let g:mapleader=","
 syntax enable
 set background=dark
 let g:gruvbox_vert_split = 'bg2'
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'soft'
 "set background=light
 "let g:gruvbox_contrast_light = 'hard'
 colorscheme gruvbox
