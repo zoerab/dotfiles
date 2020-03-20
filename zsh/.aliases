@@ -4,12 +4,10 @@ alias top='top'
 alias vi='vim'
 alias tree='tree -a'
 alias extip='curl ipecho.net/plain; echo'
-alias intip='ipconfig getifaddr en0 || ipconfig getifaddr en1 || ipconfig getifaddr en5 || ipconfig getifaddr en8'
 alias htop='sudo htop'
 alias bt='wget http://cachefly.cachefly.net/100mb.test -O /dev/null'
 alias 4chan-dl='wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress'
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
-alias flushdns="sudo killall -HUP mDNSResponder"
 alias 8888="ping 8.8.8.8"
 alias fuck="git reset --hard && git clean -df"
 alias gs="git status"
@@ -26,6 +24,8 @@ alias rm='rm -i'
 alias df='df -h'
 alias mkdir='mkdir -p'
 alias mtr='sudo mtr'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias pbsort='pbpaste | sort | pbcopy'
 
 # Showing weather

@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/zee/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,6 +69,8 @@ plugins=(
 	z
 )
 
+export ZSH_DISABLE_COMPFIX=true
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -101,6 +103,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 . $HOME/.aliases
 
+# Getting xclip/xsel to work
+export DISPLAY=:0
+
+# Autoloading SSH-AGENT
+if [ ! -S ~/.ssh/ssh_auth_sock  ]; then
+    eval `ssh-agent`
+      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
 
 # Ignoring duplicate commands in history
 export HISTCONTROL=ignoredups
@@ -119,7 +131,7 @@ export VISUAL=/usr/local/bin/vim
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export ALIEN_THEME="gruvbox"
-export ALIEN_DATE_TIME_FORMAT=%H:%M:%S # default is %r
+export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
 export USE_NERD_FONT=1
 export LANG="en_US.UTF-8"
 
