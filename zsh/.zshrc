@@ -107,12 +107,12 @@ source $ZSH/oh-my-zsh.sh
 export DISPLAY=:0
 
 # Autoloading SSH-AGENT
-if [ ! -S ~/.ssh/ssh_auth_sock  ]; then
-    eval `ssh-agent`
-      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add
+#if [ ! -S ~/.ssh/ssh_auth_sock  ]; then
+#    eval `ssh-agent`
+#      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+#fi
+#export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+#ssh-add -l > /dev/null || ssh-add
 
 # Ignoring duplicate commands in history
 export HISTCONTROL=ignoredups
