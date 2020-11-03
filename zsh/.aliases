@@ -16,7 +16,7 @@ alias gp="git push"
 alias gs="git status"
 alias htop='sudo htop'
 alias ll='ls -alh'
-alias ls='lsd'
+# alias ls='lsd'
 alias lynx='lynx -vikeys'
 alias mkdir='mkdir -p'
 alias mtr='sudo mtr'
@@ -40,3 +40,7 @@ function chpwd() {
     ls -alh
 }
 
+# Cheatsheets FTW
+function cheat() {
+    curl cheat.sh/"$@";
+}
