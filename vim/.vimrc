@@ -30,8 +30,6 @@ Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
 Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
-Plug 'fatih/vim-go',                    {'for': 'go', 'do': ':GoInstallBinaries'}
-Plug 'nsf/gocode',                      { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'  }
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
