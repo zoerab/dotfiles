@@ -172,6 +172,10 @@ set fillchars=vert:\
 "-----------------------------------------------------"
 imap jj <ESC>
 
+"-----------------------------------------------------"
+" Copy selection to the system clipboard with CTR + Y
+"-----------------------------------------------------"
+vnoremap <C-y> :'<,'>w !xclip -in -selection clipboard<Cr><Cr>
 
 "-----------------------------------------------------"
 " Commenting the code
