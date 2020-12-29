@@ -15,6 +15,7 @@ alias gl="git log"
 alias gp="git push"
 alias gs="git status"
 alias htop='sudo htop'
+alias ls='exa'
 alias ll='ls -alh'
 # alias ls='lsd'
 alias lynx='lynx -vikeys'
