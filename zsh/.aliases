@@ -31,7 +31,7 @@ alias tree='tree -a'
 alias vi='vim'
 
 
-#add new ip host pair to /etc/hosts
+# Add new ip host pair to /etc/hosts (ex.: addhost 127.0.0.1 host.domain.local)
 function addhost() {
    if [[ "$1" && "$2" ]]
    then
@@ -61,7 +61,7 @@ function addhost() {
    fi
 }
 
-# remove specified host from /etc/hosts
+# Remove specified host from /etc/hosts
 function removehost() {
     if [[ "$1" ]]
     then
