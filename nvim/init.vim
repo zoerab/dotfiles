@@ -205,15 +205,7 @@ nnoremap <C-H> <C-W><C-H>
 "-----------------------------------------------------"
 " Quickedit vimrc file
 "-----------------------------------------------------"
-nmap <Leader>ev  :tabedit $MYVIMRC<cr>
-
-
-"-----------------------------------------------------"
-" Autosource vimrc on save
-"-----------------------------------------------------"
-augroup autosourcing
-  autocmd BufWritePost .vimrc source %
-augroup END
+nmap <Leader>ev  :tabedit ~/dotfiles/nvim/init.vim<cr>
 
 
 "-----------------------------------------------------"
