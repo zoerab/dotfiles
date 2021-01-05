@@ -21,6 +21,7 @@
 !nvim/.nvimrc
 !tmux/.tmux.conf
 !tmux/.tmux.server.conf
+!vim/
 !vim/.vimrc
 !vimperator/.vimperatorrc
 !zsh/
