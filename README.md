@@ -69,6 +69,21 @@ Start Vim and `:PlugInstall` to install plugins
 
 ---
 
+For the people who want to migrate from VIM to Neovim (Nvim) do the following:
+
+```
+cp -f ~/.vimrc ~/.config/nvim/init.vim
+```
+
+
+If applicable, do also 
+
+```
+cp -rf ~/.vim/autoload/ ~/.local/share/nvim/site/autoload/
+```
+
+---
+
 Pat yourself on your back an have a `insert_beverage_here` for a job well done! 🍻
 
 Hit me up on [Twitter](https://twitter.com/zoerab) for comments, tips, suggestions!
