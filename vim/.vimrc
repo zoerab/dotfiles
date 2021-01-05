@@ -97,7 +97,7 @@ set showmode
 set modelines=0
 set shiftwidth=2
 set shiftround
-set clipboard=unnamed
+set clipboard=unnamedplus
 set synmaxcol=128
 set encoding=UTF-8
 set tabstop=2
