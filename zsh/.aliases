@@ -28,8 +28,9 @@ alias pbpaste='xclip -selection clipboard -o'
 alias pbsort='pbpaste | sort | pbcopy'
 alias rm='rm -i'
 alias tree='tree -a'
-alias vi='vim'
-
+alias vi='nvim'
+alias vim='nvim'
+alias yt='youtube-dl --add-metadata -i'
 
 # Add new ip host pair to /etc/hosts (ex.: addhost 127.0.0.1 host.domain.local)
 function addhost() {
