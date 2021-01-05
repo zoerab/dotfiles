@@ -18,7 +18,7 @@
 !git/
 !git/.gitconfig
 !nvim/
-!nvim/.nvimrc
+!nvim/init.vim
 !tmux/.tmux.conf
 !tmux/.tmux.server.conf
 !vim/
