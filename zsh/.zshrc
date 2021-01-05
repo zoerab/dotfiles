@@ -126,9 +126,9 @@ export DISPLAY=:0
 # Ignoring duplicate commands in history
 export HISTCONTROL=ignoredups
 
-# VIM FTW
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+# Nvim FTW
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
 
 # FZF
