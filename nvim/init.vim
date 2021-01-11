@@ -121,14 +121,14 @@ set listchars=tab:▏\ ,trail:~,eol:¬
 "-----------------------------------------------------"
 " Arrows are evil
 "-----------------------------------------------------"
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 
 "-----------------------------------------------------"
@@ -262,6 +262,7 @@ com! W w !sudo tee % > /dev/null
 "-----------------------------------------------------"
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
+let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg', '.DS_Store']
 let NERDTreeShowHidden=1
 nmap <silent> <leader>y :NERDTreeFind<cr>
