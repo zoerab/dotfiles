@@ -1,10 +1,10 @@
-alias 4chan-dl='wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress'
+alias 4chan-dl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress"
 alias 8888="ping -c 4 1.1.1.1"
-alias bt='wget http://cachefly.cachefly.net/100mb.test -O /dev/null'
-alias cp='cp -i'
-alias df='df -h'
+alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
+alias cp="cp -i"
+alias df="df -h"
 alias dirs="dirs -v"
-alias extip='curl ipecho.net/plain; echo'
+alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
 alias fuck="git reset --hard && git clean -df"
 alias gaa="git add ."
@@ -14,66 +14,61 @@ alias ghistlog="git log --graph --full-history --all --color --pretty=format:'%x
 alias gl="git log"
 alias gp="git push"
 alias gs="git status"
-alias htop='sudo htop'
-alias ls='exa'
-alias ll='ls -alh'
-alias lynx='lynx -vikeys'
-alias mkdir='mkdir -p'
-alias mtr='sudo mtr'
-alias mv='mv -i'
+alias htop="sudo htop"
+alias ls="exa"
+alias ll="ls -alh"
+alias lynx="lynx -vikeys"
+alias mkdir="mkdir -p"
+alias mtr="sudo mtr"
+alias mv="mv -i"
 alias tb="nc termbin.com 9999"
 alias tbc="nc termbin.com 9999 | xclip -selection clipboard"
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias pbsort='pbpaste | sort | pbcopy'
-alias rm='rm -i'
-alias tree='tree -a'
-alias vi='nvim'
-alias vim='nvim'
-alias yt='youtube-dl --add-metadata -i'
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias pbsort="pbpaste | sort | pbcopy"
+alias rm="rm -i"
+alias tree="tree -a"
+alias vi="nvim"
+alias vim="nvim"
+alias yt="youtube-dl --add-metadata -i"
 
 # Add new ip host pair to /etc/hosts (ex.: addhost 127.0.0.1 host.domain.local)
 function addhost() {
-   if [[ "$1" && "$2" ]]
-   then
-       IP=$1
-       HOSTNAME=$2
+    if [[ "$1" && "$2" ]]; then
+        IP=$1
+        HOSTNAME=$2
 
-       if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
-           then
-               echo "$HOSTNAME already exists:";
-               echo $(grep $HOSTNAME /etc/hosts);
-           else
-               echo "Adding $HOSTNAME to your /etc/hosts";
-               printf "%s\t%s\n" "$IP" "$HOSTNAME" | sudo tee -a /etc/hosts > /dev/null;
+        if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+            echo "$HOSTNAME already exists:"
+            echo $(grep $HOSTNAME /etc/hosts)
+        else
+            echo "Adding $HOSTNAME to your /etc/hosts"
+            printf "%s\t%s\n" "$IP" "$HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
 
-               if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
-                   then
-                       echo "$HOSTNAME was added succesfully:";
-                       echo $(grep $HOSTNAME /etc/hosts);
-                   else
-                       echo "Failed to Add $HOSTNAME, Try again!";
-               fi
-       fi
-   else
-       echo "Error: missing required parameters."
-       echo "Usage: "
-       echo "  addhost ip domain"
-   fi
+            if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+                echo "$HOSTNAME was added succesfully:"
+                echo $(grep $HOSTNAME /etc/hosts)
+            else
+                echo "Failed to Add $HOSTNAME, Try again!"
+            fi
+        fi
+    else
+        echo "Error: missing required parameters."
+        echo "Usage: "
+        echo "  addhost ip domain"
+    fi
 }
 
 # Remove specified host from /etc/hosts
 function removehost() {
-    if [[ "$1" ]]
-    then
+    if [[ "$1" ]]; then
         HOSTNAME=$1
 
-        if [ -n "$(grep $HOSTNAME /etc/hosts)" ]
-        then
-            echo "$HOSTNAME Found in your /etc/hosts, Removing now...";
+        if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+            echo "$HOSTNAME Found in your /etc/hosts, Removing now..."
             sudo sed -i".bak" "/$HOSTNAME/d" /etc/hosts
         else
-            echo "$HOSTNAME was not found in your /etc/hosts";
+            echo "$HOSTNAME was not found in your /etc/hosts"
         fi
     else
         echo "Error: missing required parameters."
@@ -88,38 +83,34 @@ function chpwd() {
     ls -alh
 }
 
-
 # Cheatsheets FTW
 function cheat() {
-    curl cheat.sh/"$@";
+    curl cheat.sh/"$@"
 }
 
-
-
 # Extracting archives made easy
-function extract () {
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2)        tar xjf $1        ;;
-            *.tar.gz)         tar xzf $1        ;;
-            *.bz2)            bunzip2 $1        ;;
-            *.rar)            unrar x $1        ;;
-            *.gz)             gunzip $1         ;;
-            *.tar)            tar xf $1         ;;
-            *.tbz2)           tar xjf $1        ;;
-            *.tgz)            tar xzf $1        ;;
-            *.zip)            unzip $1          ;;
-            *.Z)              uncompress $1     ;;
-            *.7z)             7zr e $1          ;;
-            *)                echo "'$1' cannot be extracted via extract()" ;;
+function extract() {
+    if [ -f "$1" ]; then
+        case "$1" in
+        *.tar.bz2) tar xjf "$1" ;;
+        *.tar.gz) tar xzf "$1" ;;
+        *.bz2) bunzip2 "$1" ;;
+        *.rar) unrar x "$1" ;;
+        *.gz) gunzip "$1" ;;
+        *.tar) tar xf "$1" ;;
+        *.tbz2) tar xjf "$1" ;;
+        *.tgz) tar xzf "$1" ;;
+        *.zip) unzip "$1" ;;
+        *.Z) uncompress "$1" ;;
+        *.7z) 7zr e "$1" ;;
+        *) echo "'$1' cannot be extracted via extract()" ;;
         esac
     else
         echo "'$1' is not a valid file"
     fi
 }
 
-
 # Showing weather
-weather(){
-  curl -4 "http://wttr.in/$1"
+weather() {
+    curl -4 "http://wttr.in/$1"
 }
