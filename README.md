@@ -84,6 +84,24 @@ cp -rf ~/.vim/autoload/ ~/.local/share/nvim/site/autoload/
 
 ---
 
+For those who use Neovim already
+
+```
+mkdir -p ~/.config/nvim/
+```
+
+```
+ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+```
+
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Start Neovim and `:PlugInstall` to install plugins
+
+
 Pat yourself on your back an have a `insert_beverage_here` for a job well done! 🍻
 
 Hit me up on [Twitter](https://twitter.com/zoerab) for comments, tips, suggestions!
