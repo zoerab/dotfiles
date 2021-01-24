@@ -58,6 +58,7 @@ let g:gruvbox_contrast_dark = 'hard'
 "let g:gruvbox_contrast_light = 'hard'
 colorscheme gruvbox
 
+
 "-----------------------------------------------------"
 " Airline configurations
 "-----------------------------------------------------"
@@ -65,11 +66,13 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'gruvbox'
 
+
 "-----------------------------------------------------"
 " Spell check settings
 "-----------------------------------------------------"
 :hi clear SpellBad
 :hi SpellBad cterm=underline ctermfg=red
+
 
 "-----------------------------------------------------"
 " Tmux integration with airline
@@ -118,6 +121,7 @@ set lazyredraw
 set backspace=indent,eol,start
 set listchars=tab:▏\ ,trail:~,eol:¬
 
+
 "-----------------------------------------------------"
 " Arrows are evil
 "-----------------------------------------------------"
@@ -164,7 +168,38 @@ endif
 "-----------------------------------------------------"
 " Space character in vertical splitt line
 "-----------------------------------------------------"
-set fillchars=vert:\ 
+set fillchars+=vert:\ 
+
+
+"-----------------------------------------------------"
+" New splits go either bellow or to right
+"-----------------------------------------------------"
+set splitbelow splitright
+
+
+"-----------------------------------------------------"
+" Easier split navigation (ctrl+j,h,k,l buttons)
+"-----------------------------------------------------"
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+"-----------------------------------------------------"
+" Adjusting split sizes abit more easier
+"-----------------------------------------------------"
+noremap <silent> <C-Left> :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up> :resize +3<CR>
+noremap <silent> <C-Down> :resize -3<CR>
+
+
+"-----------------------------------------------------"
+" Change 2 split windows from vert to horiz and back
+"-----------------------------------------------------"
+map <Leader>th <C-w>t<C-w>H
+map <Leader>tk <C-w>t<C-w>K
 
 
 "-----------------------------------------------------"
@@ -172,10 +207,12 @@ set fillchars=vert:\
 "-----------------------------------------------------"
 imap jj <ESC>
 
+
 "-----------------------------------------------------"
 " Copy selection to the system clipboard with CTR + Y
 "-----------------------------------------------------"
 vnoremap <C-y> :'<,'>w !xclip -in -selection clipboard<Cr><Cr>
+
 
 "-----------------------------------------------------"
 " Commenting the code
@@ -191,15 +228,6 @@ nmap mcl <Plug>CommentaryLine
 " ignoring warnings about untitled buffers
 "-----------------------------------------------------"
 autocmd FocusLost * silent! wa
-
-
-"-----------------------------------------------------"
-" Easier split navigation (ctrl+j,h,k,l buttons)
-"-----------------------------------------------------"
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 
 "-----------------------------------------------------"
@@ -267,6 +295,7 @@ let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg', '.DS_Store']
 let NERDTreeShowHidden=1
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
+
 "-----------------------------------------------------"
 " FZF
 "-----------------------------------------------------"
@@ -301,6 +330,7 @@ command! -bang -nargs=* Rg
 " File privew window on the right
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%'), <bang>0)
+
 
 "-----------------------------------------------------"
 " Fugitive Shortcuts
