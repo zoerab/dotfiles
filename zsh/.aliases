@@ -1,5 +1,5 @@
 alias 4chan-dl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress"
-alias 8888="ping -c 4 1.1.1.1"
+alias 1111="ping -c 4 1.1.1.1"
 alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias cp="cp -i"
 alias df="df -h"
@@ -25,7 +25,6 @@ alias tb="nc termbin.com 9999"
 alias tbc="nc termbin.com 9999 | xclip -selection clipboard"
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
-alias pbsort="pbpaste | sort | pbcopy"
 alias rm="rm -i"
 alias tree="tree -a"
 alias vi="nvim"
@@ -38,16 +37,16 @@ function addhost() {
         IP=$1
         HOSTNAME=$2
 
-        if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+        if [ -n "$(grep "$HOSTNAME" /etc/hosts)" ]; then
             echo "$HOSTNAME already exists:"
-            echo $(grep $HOSTNAME /etc/hosts)
+            echo "$(grep $HOSTNAME /etc/hosts)"
         else
             echo "Adding $HOSTNAME to your /etc/hosts"
             printf "%s\t%s\n" "$IP" "$HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
 
-            if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+            if [ -n "$(grep "$HOSTNAME" /etc/hosts)" ]; then
                 echo "$HOSTNAME was added succesfully:"
-                echo $(grep $HOSTNAME /etc/hosts)
+                echo "$(grep $HOSTNAME /etc/hosts)"
             else
                 echo "Failed to Add $HOSTNAME, Try again!"
             fi
@@ -64,7 +63,7 @@ function removehost() {
     if [[ "$1" ]]; then
         HOSTNAME=$1
 
-        if [ -n "$(grep $HOSTNAME /etc/hosts)" ]; then
+        if [ -n "$(grep "$HOSTNAME" /etc/hosts)" ]; then
             echo "$HOSTNAME Found in your /etc/hosts, Removing now..."
             sudo sed -i".bak" "/$HOSTNAME/d" /etc/hosts
         else
@@ -85,7 +84,7 @@ function chpwd() {
 
 # Cheatsheets FTW
 function cheat() {
-    curl cheat.sh/"$@"
+    curl cheat.sh/"$*"
 }
 
 # Extracting archives made easy
