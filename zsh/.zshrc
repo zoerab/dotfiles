@@ -15,9 +15,8 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="bullet-train.zsh/bullet-train"
-ZSH_THEME="alien/alien"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="alien/alien"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -139,6 +138,7 @@ export VISUAL=/usr/bin/nvim
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+# ALIEN prompt customization
 export ALIEN_THEME="bnw"
 export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
 export ALIEN_GIT_MOD_SYM=✹
@@ -151,4 +151,4 @@ export LC_ALL="en_US.UTF-8"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
