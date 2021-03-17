@@ -138,6 +138,10 @@ export VISUAL=/usr/bin/nvim
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+# BAT as manpage reader
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANROFFOPT="-c"
+
 # ALIEN prompt customization
 export ALIEN_THEME="bnw"
 export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
