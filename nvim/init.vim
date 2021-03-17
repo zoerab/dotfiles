@@ -279,11 +279,9 @@ nnoremap <leader><leader> <C-^>
 
 
 "-----------------------------------------------------"
-" Saving files in SUDO mode
+" Saving files in SUDO mode (seem to only work in VIM)
 "-----------------------------------------------------"
-"cmap fuck w !sudo tee > /dev/null %
-com! W w !sudo tee % > /dev/null
-
+" command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 "-----------------------------------------------------"
 " NERDTree
