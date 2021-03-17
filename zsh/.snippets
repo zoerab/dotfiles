@@ -1,4 +1,4 @@
-############################### BASH SCRIPT #######################################
+# BASH SCRIPT template ############################################################
 #!/usr/bin/env bash
 
 set -o errexit
@@ -21,6 +21,72 @@ main() {
     # your code goes here...
 }
 
-main "${@}"
+main "${@}"###############################
+
 
 ###################################################################################
+# NMAP goodies
+
+# All-in-one 
+ports=$(nmap -p- --min-rate=500 $1 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+nmap -p$ports -A $1
+
+# Initial scan
+nmap -vv -sV -sC -Pn -oA scans/initial <IP addr>
+
+# Expanded scan
+nmap -vv -A -p- -Pn --script vuln -oA scans/expanded <IP addr>
+
+# Common malware scan 
+nmap -sV --script=http-malware-host
+
+# Google malware check 
+nmap -p80 --script http-google-malware
+
+# CVE detection 
+nmap -Pn --script vuln`
+
+# Intense scan with UDP 
+nmap -vv -sS -sU T4 -A`
+
+# Quick traceroute 
+nmap -sn --traceroute`
+
+# Simple ICMP ping 
+nmap -sn`
+
+###################################################################################
+# TCPdump goodies
+
+# Basic capture
+tcpdump -i wlan0 -s 0 -w mypackets.trace
+
+# Monitor HTTP traffic on wlan0
+tcpdump -i wlan0 -A port http
+
+# Capture credentials on http
+tcpdump -i wlan0 -A port http | egrep -i ‘pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user | uname= ‘
+
+# Capture credentials on all protocols
+tcpdump -i wlan0 -A port port http or port ftp or port smtp or port imap or port pop3 | egrep -i ‘pass=|pwd=|log=|login=|user=|username=|pw=|passw=|passwd=|password=|pass:|user:|username:|password:|login:|pass |user | uname= ‘
+
+# See what traffic is hitting you
+tcpdump -i wlan0 -n  | head
+
+# Find all HOST headers
+tcpdump -s0 -vv | grep "Host:"
+
+# Find cookies in all HTTP requests which are being captured
+tcpdump -s0 -vv | grep "[Set-Cookie| Host: | Cookie:]"
+
+###################################################################################
+# Archiving stuff
+
+# Archiving password protected folder recursivelly
+zip -re myarchive.zip myfolder/
+
+# Extracting
+unzip myarchive.zip
+
+###################################################################################
+
