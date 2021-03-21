@@ -16,6 +16,7 @@ alias gl="git log"
 alias gp="git push"
 alias gs="git status"
 alias htop="sudo htop"
+alias less='less --RAW-CONTROL-CHARS'
 alias ls="exa"
 alias ll="ls -lahg --color=always --group-directories-first --extended"
 alias lynx="lynx -vikeys"

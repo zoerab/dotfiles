@@ -138,9 +138,21 @@ export VISUAL=/usr/bin/nvim
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+# MANPAGES
 # BAT as manpage reader
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # export MANROFFOPT="-c"
+
+# NVIM as manpage reader
+# export MANPAGER='nvim +Man!'
+ 
+# MOST as a manpage reader
+# export MANPAGER='/usr/bin/most'
+
+# LESS as a manpage reader with few options
+export MANPAGER='less -s -M +Gg'
+export LS_OPTS='--color=auto'
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
 
 # ALIEN prompt customization
 export ALIEN_THEME="bnw"
