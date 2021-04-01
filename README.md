@@ -22,10 +22,14 @@ Via **WGET**
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Install ZSH goodies
+* Install ZSH goodies
 
-[Alien PROMPT](https://github.com/eendroroy/alien)
 
+[Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
 
 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
