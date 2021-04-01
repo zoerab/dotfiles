@@ -116,7 +116,18 @@ function extract() {
     fi
 }
 
+# Pretty CSV viewer
+function pretty_csv {
+    #column -t -s, -n "$@" | less -F -S -X -K
+    perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$@" | column -t -s, | less  -F -S -X -K
+}
+
+# Pretty TSV viewer
+function pretty_tsv {
+    perl -pe 's/((?<=\t)|(?<=^))\t/ \t/g;' "$@" | column -t -s $'\t' | less  -F -S -X -K
+}
+
 # Showing weather
-weather() {
+function weather() {
     curl -4 "http://wttr.in/$1"
 }
