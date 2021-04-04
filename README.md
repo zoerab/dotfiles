@@ -22,6 +22,10 @@ Via **WGET**
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+* Get some decent fonts (that support glyphs)
+
+Mine personal favorites are "Hack Nerd Font", get them [here](https://www.nerdfonts.com/font-downloads)
+
 * Install ZSH goodies
 
 
