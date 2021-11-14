@@ -26,6 +26,9 @@ alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
+function ouisearch() {
+  curl -s -N "https://gitlab.com/wireshark/wireshark/-/raw/master/manuf" | grep -i "$1"
+}
 
 # Get TOP process eating CPU
 alias pscpu='ps auxf | sort -nr -k 3'
@@ -169,6 +172,11 @@ function extract {
       fi
     done
 fi
+}
+
+# Scrap a site (beta)
+function scrapsite() {
+    wget -e robots=off --recursive --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows --domains "$1"--no-parent "$1"
 }
 
 IFS=$SAVEIFS
