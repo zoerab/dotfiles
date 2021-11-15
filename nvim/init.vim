@@ -155,6 +155,11 @@ vnoremap K :m '<-2<CR>gv=gv
 
 
 "-----------------------------------------------------"
+" Greatest remap EVER (according to ThePrimeagen)
+"-----------------------------------------------------"
+vnoremap <leader>p "_dP
+
+"-----------------------------------------------------"
 " Enable mouse support in VIM, NeoVim might have issues
 "-----------------------------------------------------"
 if has('mouse')
