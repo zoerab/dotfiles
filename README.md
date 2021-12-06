@@ -35,6 +35,12 @@ Mine personal favorites are "Hack Nerd Font", get them [here](https://www.nerdfo
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+Get the preconfigured p10k theme setup
+
+```
+ln -s ~/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
+```
+
 [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 ```
@@ -50,7 +56,10 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 ZSHRC + aliases file linking
 
+Back-up pre-existing zshrc
+
 ```
+mv ~/.zshrc{,.BACKUP}
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/zsh/.aliases ~/.aliases
 ```
