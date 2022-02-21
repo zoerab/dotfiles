@@ -60,7 +60,18 @@ Back-up pre-existing zshrc
 
 ```
 mv ~/.zshrc{,.BACKUP}
+```
+
+Place config files
+```
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+```
+
+```
+ln -s ~/dotfiles/zsh/.LESS_TERMCAP ~/.LESS_TERMCAP
+```
+
+```
 ln -s ~/dotfiles/zsh/.aliases ~/.aliases
 ```
 
