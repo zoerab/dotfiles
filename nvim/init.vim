@@ -88,6 +88,7 @@ let g:tmuxline_preset = 'full'
 set cursorline
 set cursorcolumn
 set pastetoggle=<F2>
+set scrolloff=7
 set expandtab
 set visualbell
 set noerrorbells
@@ -98,12 +99,13 @@ set autoindent
 set copyindent
 set showmode
 set modelines=0
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set shiftround
 set clipboard=unnamedplus
 set synmaxcol=128
 set encoding=UTF-8
-set tabstop=2
 set smarttab
 set nowrap
 set number
@@ -361,4 +363,3 @@ let g:undotree_WindowLayout = 4
 " Quit with :Q
 "-----------------------------------------------------"
 command -nargs=0 Quit :qa!
-

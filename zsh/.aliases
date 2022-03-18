@@ -19,6 +19,7 @@ alias rm="rm -i"
 alias tree="tree -a"
 alias vi="nvim"
 alias vim="nvim"
+alias restartplasma="kquitapp5 plasmashell && kstart5 plasmashell"
 
 # Custom stuff
 alias 4chandl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress"
@@ -99,6 +100,10 @@ function addhost() {
 function checkForUnsignedKernelMods() {
   for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "signature" || echo "no signature for module: ${mod}" ; done
 }
+
+# Searching GZipped files for a pattern
+alias gzfind01="/usr/bin/zgrep -i -h $1 /logs/devices/ona/userlogins/* | sed 's/#/\t/g' | sed 's/\\/\t/g'"
+alias gzfind02="/usr/bin/zgrep -i -h $1 $2 | sed 's/#/\t/g' | sed 's/\\/\t/g'"
 
 # Showoff colors
 function showcolors() {
