@@ -7,7 +7,7 @@ alias fgrep="fgrep --color=auto"
 alias free="free -m"
 alias grep="grep --color=auto"
 alias htop="sudo htop"
-alias less='less --RAW-CONTROL-CHARS'
+alias less="less --RAW-CONTROL-CHARS"
 alias ls="exa"
 alias ll="ls -lahg --color=always --group-directories-first --extended"
 alias lynx="lynx -vikeys"
