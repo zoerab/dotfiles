@@ -33,6 +33,7 @@ Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 "-----------------------------------------------------"
 " End of plugins
@@ -52,11 +53,13 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
-let g:gruvbox_vert_split = 'bg2'
-let g:gruvbox_contrast_dark = 'hard'
+" set background=light
+" let g:gruvbox_vert_split = 'bg2'
+" let g:gruvbox_contrast_dark = 'hard'
 "set background=light
 "let g:gruvbox_contrast_light = 'hard'
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme PaperColor
 
 
 "-----------------------------------------------------"
