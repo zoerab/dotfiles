@@ -57,17 +57,17 @@ alias tbc="nc termbin.com 9999 | xclip -selection clipboard"
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 
-# Youtube-dl
-alias yt="youtube-dl --add-metadata -i"
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+# yt-dlp
+alias yt="yt-dlp --add-metadata"
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-m4a="yt-dlp --extract-audio --audio-format m4a "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias yta-opus="yt-dlp --extract-audio --audio-format opus "
+alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
+alias yta-wav="yt-dlp --extract-audio --audio-format wav "
+alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 
 # Add new ip host pair to /etc/hosts (ex.: addhost 127.0.0.1 host.domain.local)
 function addhost() {
@@ -101,9 +101,6 @@ function checkForUnsignedKernelMods() {
   for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "signature" || echo "no signature for module: ${mod}" ; done
 }
 
-# Searching GZipped files for a pattern
-alias gzfind01="/usr/bin/zgrep -i -h $1 /logs/devices/ona/userlogins/* | sed 's/#/\t/g' | sed 's/\\/\t/g'"
-alias gzfind02="/usr/bin/zgrep -i -h $1 $2 | sed 's/#/\t/g' | sed 's/\\/\t/g'"
 
 # Showoff colors
 function showcolors() {
