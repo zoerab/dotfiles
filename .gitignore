@@ -24,6 +24,8 @@
 !vim/
 !vim/.vimrc
 !vimperator/.vimperatorrc
+!wireshark/
+!wireshark/Forensics.zip
 !zsh/
 !zsh/.zshrc
 !zsh/.aliases
