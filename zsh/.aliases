@@ -101,6 +101,11 @@ function checkForUnsignedKernelMods() {
   for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "signature" || echo "no signature for module: ${mod}" ; done
 }
 
+# Lookup JA3 SSL/TLS signature
+function ja3lookup() {
+    curl -s -X GET "https://ja3er.com/search/$1" | jq
+}
+
 
 # Showoff colors
 function showcolors() {
