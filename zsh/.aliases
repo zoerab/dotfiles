@@ -19,6 +19,7 @@ alias rm="rm -i"
 alias tree="tree -a"
 alias vi="nvim"
 alias vim="nvim"
+alias mvp="mpv"
 alias restartplasma="kquitapp5 plasmashell && kstart5 plasmashell"
 
 # Custom stuff
