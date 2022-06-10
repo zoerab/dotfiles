@@ -208,13 +208,22 @@ function weather() {
 
 # Make pretty looking messages
 function print_good() {
-    echo -e "\x1B[01;32m[+]\x1B[0m" $1
+    echo -e "\x1B[01;32m[+]\x1B[0m" "$1"
 }
 
 function print_error() {
-    echo -e "\x1B[01;31m[+]\x1B[0m" $1
+    echo -e "\x1B[01;31m[+]\x1B[0m" "$1"
 }
 
 function print_info() {
-    echo -e "\x1B[01;34m[+]\x1B[0m" $1
+    echo -e "\x1B[01;34m[+]\x1B[0m" "$1"
+}
+
+# Zeek stuff
+#
+# Requirements: zeek, datamash
+#
+## Cummulative talk time (from conn.log entries, top 10 talkers) 
+function zeek-sort-duration() {
+    cat "$1" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' | grep -v '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head
 }
