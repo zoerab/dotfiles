@@ -224,6 +224,85 @@ function print_info() {
 # Requirements: zeek, datamash
 #
 ## Cummulative talk time (from conn.log entries, top 10 talkers) 
-function zeek-sort-duration() {
-    cat "$1" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' | grep -v '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head
+function zeek_sort_duration() {
+
+    if [[ ( $@ == "--help") ||  $@ == "-h" ]]
+    then 
+	    echo "Usage: $0 <conn.log>" # zeek_sort_duration conn.log
+	    return
+    fi
+    
+    FILE_TO_READ=${1:-conn.log} # By default zeek creates conn.log file when it parses pcap/pcapng
+
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' | grep -v '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head | sed 's/\t/\,/g' | column -t -s ","
 }
+
+## Look for odd HTTP user agents
+function zeek_count_user_agents() {
+
+    if [[ ( $@ == "--help") ||  $@ == "-h" ]]
+    then 
+	    echo "Usage: $0 <http.log> <OPTIONAL:IP address>" # zeek_count_user_agents http.log <192.168.100.100>
+	    return
+    fi
+
+    FILE_TO_READ=${1:-http.log} # By default zeek creates http.log file when it parses pcap/pcapng
+    IP=${2:-}                   # OPTIONAL: Target IP adres
+
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h user_agent | grep "$IP" | sort | uniq | cut -f 3 | sort | uniq -c | sort -rn
+}
+
+## Certificate check
+function zeek_cert_check() {
+
+    if [[ ( $@ == "--help") ||  $@ == "-h" ]]
+    then 
+	    echo "Usage: $0 <ssl*.log>" # zeek_cert_check ssl*.log
+	    return
+    fi
+
+    FILE_TO_READ=${1:-"ssl.log"} # By default zeek creates ssl.log file(s) when it parses pcap/pcapng
+
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h id.resp_p validation_status | grep 'self signed' | sort | uniq
+}
+
+# TShark stuff
+#
+# Requirements: tshark
+#
+## Counting FQDNs per domain
+function tshark_count_fqdn_per_domain() {
+    
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then 
+	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+	    return
+    fi
+
+    tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | rev | cut -d '.' -f 1-2 | rev | sort | uniq -c | sort -rn | head -10
+}
+
+## Show all instances of unique FQDNs queried
+function tshark_show_unique_fqdns() {
+    
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then 
+	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+	    return
+    fi
+
+    tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | head -10
+}
+
+## Show all instances of unique FQDNs queried (reversed)
+function tshark_show_unique_fqdns() {
+    
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then 
+	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+	    return
+    fi
+
+    tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | rev | head -10
+}
+
