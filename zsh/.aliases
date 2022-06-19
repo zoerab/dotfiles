@@ -219,6 +219,7 @@ function print_info() {
     echo -e "\x1B[01;34m[+]\x1B[0m" "$1"
 }
 
+
 # Zeek stuff
 #
 # Requirements: zeek, datamash
@@ -265,6 +266,24 @@ function zeek_cert_check() {
 
     cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h id.resp_p validation_status | grep 'self signed' | sort | uniq
 }
+
+
+## Certificate check
+function zeek_session_size() {
+
+    if [[ ( $@ == "--help") ||  $@ == "-h" ]]
+    then 
+	    echo "Usage: $0 <conn.log> <IP source> <IP destination>" # zeek_session_size conn.log <192.168.100.100> <1.1.1.1>
+	    return
+    fi
+
+    FILE_TO_READ=${1:-"conn.log"} # By default zeek creates conn.log file(s) when it parses pcap/pcapng
+    IP_SRC="$2"
+    IP_DST="$3"
+
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h orig_bytes | grep "$IP_SRC" | grep "$IP_DST" | sort | uniq -c | sort -rn
+}
+
 
 # TShark stuff
 #
