@@ -50,8 +50,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 [zsh-syntax-highlighting](https://github.com/mattjj/my-oh-my-zsh/tree/master/plugins/zsh-syntax-highlighting)
 
 ```
-cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ZSHRC + aliases file linking
