@@ -223,15 +223,15 @@ function print_info() {
 #
 # Requirements: zeek, datamash
 #
-## Cumulative talk time (from conn.log entries, top 10 talkers) 
+## Cumulative talk time (from conn.log entries, top 10 talkers)
 function zeek_sort_duration() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
-    then 
-	    echo "Usage: $0 <conn.log>" # zeek_sort_duration conn.log
-	    return
+    then
+        echo "Usage: $0 <conn.log>" # zeek_sort_duration conn.log
+        return
     fi
-    
+
     FILE_TO_READ=${1:-conn.log} # By default zeek creates conn.log file when it parses pcap/pcapng
 
     cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' | grep -v '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head | column -t -s $'\t'
@@ -241,9 +241,9 @@ function zeek_sort_duration() {
 function zeek_count_user_agents() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
-    then 
-	    echo "Usage: $0 <http.log> <OPTIONAL:IP address>" # zeek_count_user_agents http.log <192.168.100.100>
-	    return
+    then
+        echo "Usage: $0 <http.log> <OPTIONAL:IP address>" # zeek_count_user_agents http.log <192.168.100.100>
+        return
     fi
 
     FILE_TO_READ=${1:-http.log} # By default zeek creates http.log file when it parses pcap/pcapng
@@ -256,9 +256,9 @@ function zeek_count_user_agents() {
 function zeek_cert_check() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
-    then 
-	    echo "Usage: $0 <ssl*.log>" # zeek_cert_check ssl*.log
-	    return
+    then
+        echo "Usage: $0 <ssl*.log>" # zeek_cert_check ssl*.log
+        return
     fi
 
     FILE_TO_READ=${1:-"ssl.log"} # By default zeek creates ssl.log file(s) when it parses pcap/pcapng
@@ -267,13 +267,13 @@ function zeek_cert_check() {
 }
 
 
-## Certificate check
+## Session size check
 function zeek_session_size() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
-    then 
-	    echo "Usage: $0 <conn.log> <IP source> <IP destination>" # zeek_session_size conn.log <192.168.100.100> <1.1.1.1>
-	    return
+    then
+        echo "Usage: $0 <conn.log> <IP source> <IP destination>" # zeek_session_size conn.log <192.168.100.100> <1.1.1.1>
+        return
     fi
 
     FILE_TO_READ=${1:-"conn.log"} # By default zeek creates conn.log file(s) when it parses pcap/pcapng
@@ -290,11 +290,11 @@ function zeek_session_size() {
 #
 ## Counting FQDNs per domain
 function tshark_count_fqdn_per_domain() {
-    
+
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
-    then 
-	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
-	    return
+    then
+        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        return
     fi
 
     tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | rev | cut -d '.' -f 1-2 | rev | sort | uniq -c | sort -rn | head -10
@@ -302,11 +302,10 @@ function tshark_count_fqdn_per_domain() {
 
 ## Show all instances of unique FQDNs queried
 function tshark_show_unique_fqdns() {
-    
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
-    then 
-	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
-	    return
+    then
+        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        return
     fi
 
     tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | head -10
@@ -314,11 +313,10 @@ function tshark_show_unique_fqdns() {
 
 ## Show all instances of unique FQDNs queried (reversed)
 function tshark_show_unique_fqdns() {
-    
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
-    then 
-	    echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
-	    return
+    then
+        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        return
     fi
 
     tshark -r "$1" -T fields -e dns.qry.name | sort | uniq | rev | head -10
