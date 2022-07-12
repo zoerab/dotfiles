@@ -228,13 +228,13 @@ function zeek_sort_duration() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
     then
-        echo "Usage: $0 <conn.log>" # zeek_sort_duration conn.log
+        echo "Usage: zeek_sort_duration <conn.log>" # zeek_sort_duration conn.log
         return
     fi
 
     FILE_TO_READ=${1:-conn.log} # By default zeek creates conn.log file when it parses pcap/pcapng
 
-    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' | grep -v '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head | column -t -s $'\t'
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h duration | sort | grep -v -e '^$' -e '-' | datamash -g 1,2 sum 3 | sort -k 3 -rn | head | column -t -s $'\t'
 }
 
 ## Look for odd HTTP user agents
@@ -242,7 +242,7 @@ function zeek_count_user_agents() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
     then
-        echo "Usage: $0 <http.log> <OPTIONAL:IP address>" # zeek_count_user_agents http.log <192.168.100.100>
+        echo "Usage: zeek_count_user_agent <http.log> <OPTIONAL:IP address>" # zeek_count_user_agents <http.log> <192.168.100.100>
         return
     fi
 
@@ -257,7 +257,7 @@ function zeek_cert_check() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
     then
-        echo "Usage: $0 <ssl*.log>" # zeek_cert_check ssl*.log
+        echo "Usage: zeek <ssl*.log>" # zeek_cert_check ssl*.log
         return
     fi
 
@@ -272,7 +272,7 @@ function zeek_session_size() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
     then
-        echo "Usage: $0 <conn.log> <IP source> <IP destination>" # zeek_session_size conn.log <192.168.100.100> <1.1.1.1>
+        echo "Usage: zeek_session_size <conn.log> <IP source> <IP destination>" # zeek_session_size conn.log <192.168.100.100> <1.1.1.1>
         return
     fi
 
@@ -280,7 +280,7 @@ function zeek_session_size() {
     IP_SRC="$2"
     IP_DST="$3"
 
-    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h orig_bytes | grep "$IP_SRC" | grep "$IP_DST" | sort | uniq -c | sort -rn
+    cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h orig_bytes | grep "$IP_SRC" | grep "$IP_DST" | sort | uniq -c | sort -rnk 4
 }
 
 
@@ -293,7 +293,7 @@ function tshark_count_fqdn_per_domain() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
     then
-        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        echo "Usage: tshark_count_fqdn_per_domain <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
         return
     fi
 
@@ -301,10 +301,10 @@ function tshark_count_fqdn_per_domain() {
 }
 
 ## Show all instances of unique FQDNs queried
-function tshark_show_unique_fqdns() {
+function tshark_show_fqdn() {
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
     then
-        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        echo "Usage: tshark_show_fqdn <capture.pcapng>" # tshark_show_fqdn mycapture.pcapng
         return
     fi
 
@@ -312,10 +312,10 @@ function tshark_show_unique_fqdns() {
 }
 
 ## Show all instances of unique FQDNs queried (reversed)
-function tshark_show_unique_fqdns() {
+function tshark_show_rev_fqdn() {
     if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
     then
-        echo "Usage: $0 <capture.pcapng>" # tshark_count_fqdn_per_domain mycapture.pcapng
+        echo "Usage: tshark_show_rev_fqdn <capture.pcapng>" # tshark_show_rev_fqdn mycapture.pcapng
         return
     fi
 
