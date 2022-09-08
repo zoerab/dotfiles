@@ -131,6 +131,9 @@ export HISTCONTROL=ignoredups
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 
+# Let shell behave like VI
+# set -o vi
+
 
 # FZF
 # --files: List files that would be searched but do not search
@@ -139,6 +142,13 @@ export VISUAL=/usr/bin/nvim
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+# Perl/CPAN stuff
+PATH="/home/void/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/void/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/void/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/void/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/void/perl5"; export PERL_MM_OPT;
 
 # MANPAGES
 # BAT as manpage reader
@@ -166,7 +176,7 @@ export USE_NERD_FONT=1
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
