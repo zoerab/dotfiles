@@ -224,6 +224,12 @@ function print_info() {
 #
 # Requirements: zeek, datamash
 #
+
+## General zeek-log viewing
+function zeek_view() {
+    sed 's/#fields\t//g; s/#types\t//g' "$1" | less -Sx20
+}
+
 ## Cumulative talk time (from conn.log entries, top 10 talkers)
 function zeek_sort_duration() {
 
