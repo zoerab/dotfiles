@@ -17,6 +17,8 @@
 !chrome/
 !git/
 !git/.gitconfig
+!latte_dock/
+!latte_dock/My_Layout.layout.latte
 !nvim/
 !nvim/init.vim
 !tmux/.tmux.conf
