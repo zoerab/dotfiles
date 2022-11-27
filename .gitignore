@@ -21,6 +21,7 @@
 !latte_dock/My_Layout.layout.latte
 !nvim/
 !nvim/init.vim
+!nvim/init.server.vim
 !tmux/.tmux.conf
 !tmux/.tmux.server.conf
 !vim/
