@@ -33,4 +33,5 @@
 !zsh/.aliases
 !zsh/.LESS_TERMCAP
 !zsh/.p10k.zsh
+!zsh/.p10k.zsh.server
 !zsh/.snippets
