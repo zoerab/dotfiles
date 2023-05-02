@@ -228,7 +228,7 @@ function print_info() {
 
 ## General zeek-log viewing
 function zeek_view() {
-    sed 's/#fields\t//g; s/#types\t//g' "$1" | less -Sx20
+    sed 's/#fields\t//g; s/#types\t//g' "$1" | less -Sx25
 }
 
 ## Cumulative talk time (from conn.log entries, top 10 talkers)
