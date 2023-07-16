@@ -262,7 +262,7 @@ nnoremap <leader><leader> <C-^>
 " Saving files in SUDO mode
 "-----------------------------------------------------"
 " Key mapped to: w!!
-vim.api_nvim_set_keymap('c', 'w!!', "<esc>:lua require'utils'.sudo_write()<CR>", { silent = true })
+" vim.api_nvim_set_keymap('c', 'w!!', "<esc>:lua require'utils'.sudo_write()<CR>", { silent = true })
 
 "-----------------------------------------------------"
 " NERDTree
