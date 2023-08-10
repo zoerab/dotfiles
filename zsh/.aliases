@@ -267,7 +267,7 @@ function zeek_cert_check() {
 
     if [[ ( $@ == "--help") ||  $@ == "-h" ]]
     then
-        echo "Usage: zeek <ssl*.log>" # zeek_cert_check ssl*.log
+        echo "Usage: zeek_cert_check <ssl*.log>" # zeek_cert_check ssl*.log
         return
     fi
 
@@ -275,6 +275,24 @@ function zeek_cert_check() {
 
     cat "$FILE_TO_READ" | zeek-cut id.orig_h id.resp_h id.resp_p validation_status | grep 'self signed' | sort | uniq
 }
+
+## Certificate issuer check
+function zeek_cert_issuer_check() {
+
+    if [[ ( $@ == "--help" ) || $@ == "-h" ]]
+    then
+        echo "Usage: zeek_cert_issuer_check <ssl*.log>" # zeek_cert_issuer ssl*.log
+        return
+    fi
+
+    FILE_TO_READ=${1:-"x509.log"} # By default zeek creates x509.log file(s) when it parses pcap/pcapng
+
+    cat "$FILE_TO_READ" | zeek-cut certificate.issuer | grep -v -e '^[[:space:]]*$' | sort | uniq
+}
+
+## TODO
+# JA3/JA3S implementation
+# cat ssl.log | zeek-cut -M -F '|' ja3 ja3s
 
 
 ## Session size check
