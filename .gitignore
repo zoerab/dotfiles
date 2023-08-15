@@ -29,6 +29,8 @@
 !vimperator/.vimperatorrc
 !wireshark/
 !wireshark/Forensics.zip
+!wireshark/Cybersec.zip
+!wireshark/TCPPlain.zip
 !zsh/
 !zsh/.zshrc
 !zsh/.aliases
