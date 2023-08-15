@@ -1,5 +1,6 @@
 # Basic stuff
 alias cp="cp -i"
+alias chat="cheat"
 alias df="df -h"
 alias dirs="dirs -v"
 alias egrep="egrep --color=auto"
