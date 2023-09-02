@@ -130,5 +130,3 @@ Start Neovim and `:PlugInstall` to install plugins
 
 
 Pat yourself on your back an have a `insert_beverage_here` for a job well done! 🍻
-
-Hit me up on [Twitter](https://twitter.com/zoerab) for comments, tips, suggestions!
