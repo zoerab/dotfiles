@@ -1,41 +1,39 @@
-#####################################################
-#                                                   #
-#         File:     .gitignore                      #
-#         Category: DOTFILES                        #
-#         Author:   Zoerab Tchahkiev                #
-#         Link:     http://github.com/zoerab        #
-#         Version:  1.0                             #
-#         Revision: 12/2015                         #
-#                                                   #
-#####################################################
-
-# Ignore everything by default
-*
-
-# Watch only these files and directories
-!chrome/.cvimrc
-!chrome/
-!git/
-!git/.gitconfig
-!latte_dock/
-!latte_dock/My_Layout.layout.latte
-!nvim/
-!nvim/init.vim
-!nvim/init.server.vim
-!tmux/.tmux.conf
-!tmux/.tmux.server.conf
-!vim/
-!vim/.vimrc
-!vimperator/.vimperatorrc
-!wireshark/
-!wireshark/Forensics.zip
-!wireshark/Cybersec.zip
-!wireshark/TCPPlain.zip
-!wireshark/SF23EU.zip
-!zsh/
-!zsh/.zshrc
-!zsh/.aliases
-!zsh/.LESS_TERMCAP
-!zsh/.p10k.zsh
-!zsh/.p10k.zsh.server
-!zsh/.snippets
+######################################################
+##                                                   #
+##         File:     .gitignore                      #
+##         Category: DOTFILES                        #
+##         Author:   Zoerab Tchahkiev                #
+##         Link:     http://github.com/zoerab        #
+##         Version:  1.0                             #
+##         Revision: 12/2015                         #
+##                                                   #
+######################################################
+#
+## Ignore everything by default
+#*
+#
+## Watch only these files and directories
+#!chrome/.cvimrc
+#!chrome/
+#!git/
+#!git/.gitconfig
+#!latte_dock/
+#!latte_dock/My_Layout.layout.latte
+#!nvim/
+#!nvim/init.vim
+#!nvim/init.server.vim
+#!tmux/.tmux.conf
+#!tmux/.tmux.server.conf
+#!vim/
+#!vim/.vimrc
+#!vimperator/.vimperatorrc
+#!wireshark/
+#!wireshark/Profiles/
+#!wireshark/Profiles_BACKUPs/
+#!zsh/
+#!zsh/.zshrc
+#!zsh/.aliases
+#!zsh/.LESS_TERMCAP
+#!zsh/.p10k.zsh
+#!zsh/.p10k.zsh.server
+#!zsh/.snippets
