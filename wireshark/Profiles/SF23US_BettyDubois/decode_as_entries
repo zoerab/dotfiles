@@ -1,0 +1,7 @@
+# "Decode As" entries file for Wireshark 4.0.6.
+#
+# This file is regenerated each time "Decode As" preferences
+# are saved within Wireshark. Making manual changes should be safe,
+# however.
+decode_as_entry: udp.port,443,(none),QUIC
+decode_as_entry: udp.port,853,DTLS,QUIC
