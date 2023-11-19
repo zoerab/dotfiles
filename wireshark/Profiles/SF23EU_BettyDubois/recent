@@ -85,16 +85,16 @@ gui.geometry_main_lower_pane: 1288
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, 60,
-        %t, 81,
-        %Gt, 107,
-        %i, 498,
+        %t, 92,
+        %Gt, 110,
+        %i, 763,
         %s, 123,
         "%Cus:ip.ttl or ipv6.hlim", 60,
         %d, 123,
         %p, 89,
-        "%Cus:frame.coloring_rule.name", 98,
+        "%Cus:frame.coloring_rule.name", 131,
         %L, 61,
-        "%Cus:http.host or http.proxy_connect_host  or http2.headers.authority or tls.handshake.extensions_server_name  or gquic.tag.sni  or dhcp.option.hostname  or dhcp.server or dhcp.option.hostname or dhcp.fqdn.name or dhcpv6.failover.dns_hostname or dhcpv6.client_domain or dns.qry.name  or x509ce.dNSName  or nbns.name or browser.server  or kerberos.SNameString or ldap.assertionValue or netlogon.secchan.nl_auth_message.dns_host  or netlogon.secchan.nl_auth_message.nb_host or ntlmssp.auth.hostname", 616
+        "%Cus:http.host or http.proxy_connect_host  or http2.headers.authority or tls.handshake.extensions_server_name  or gquic.tag.sni  or dhcp.option.hostname  or dhcp.server or dhcp.option.hostname or dhcp.fqdn.name or dhcpv6.failover.dns_hostname or dhcpv6.client_domain or dns.qry.name  or x509ce.dNSName  or nbns.name or browser.server  or kerberos.SNameString or ldap.assertionValue or netlogon.secchan.nl_auth_message.dns_host  or netlogon.secchan.nl_auth_message.nb_host or ntlmssp.auth.hostname", 250
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -117,7 +117,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Wireshark/SharkFest23/Understanding and troubleshooting IPsec VPNs/Examples-SF23EU/
+gui.fileopen_remembered_dir: /home/void/Videos/YouTube/Wireshark/Wireshark_Security_Workshop-ISSA_NAC/PCAPs/Labs/Malicious Traffic 1/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

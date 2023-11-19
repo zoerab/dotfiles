@@ -238,15 +238,15 @@ gui.inactive_frame.style: FLAT
 
 # Valid color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.valid: afffaf
+#gui.color_filter_bg.valid: 006600
 
 # Invalid color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.invalid: ffafaf
+#gui.color_filter_bg.invalid: 660000
 
 # Deprecated color filter background
 # A six-digit hexadecimal RGB color triplet (e.g. fce94f)
-#gui.color_filter_bg.deprecated: ffffaf
+#gui.color_filter_bg.deprecated: 666600
 
 ####### User Interface: Columns ########
 
@@ -273,7 +273,7 @@ gui.column.format:
 
 # Font name for packet list, protocol tree, and hex dump panes. (Qt)
 # A string
-gui.qt.font_name: Menlo,13,-1,5,50,0,0,0,0,0,Regular
+gui.qt.font_name: Liberation Mono,10,-1,5,50,0,0,0,0,0,Regular
 
 ####### User Interface: Layout ########
 
@@ -412,6 +412,62 @@ capture.auto_scroll: FALSE
 # TRUE or FALSE (case-insensitive)
 #extcap.gui_save_on_start: TRUE
 
+# Remote SSH server address
+# A string
+#extcap.ciscodump.remotehost: 
+
+# Remote SSH server port
+# A string
+#extcap.ciscodump.remoteport: 22
+
+# Remote SSH server username
+# A string
+#extcap.ciscodump.remoteusername: void
+
+# Remote SSH server password
+# Password (never stored on disk)
+#extcap.ciscodump.remotepassword: 
+
+# Path to SSH private key
+# A string
+#extcap.ciscodump.sshkey: 
+
+# ProxyCommand
+# A string
+#extcap.ciscodump.proxycommand: 
+
+# Remote interface
+# A string
+#extcap.ciscodump.remoteinterface: 
+
+# Remote capture filter
+# A string
+#extcap.ciscodump.remotefilter: deny tcp host fe80::1210:c06d:d784:a595 any eq 22, deny tcp any eq 22 host fe80::1210:c06d:d784:a595, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 192.168.100.103 any eq 22, deny tcp any eq 22 host 192.168.100.103, permit ip any any
+
+# Packets to capture
+# A string
+#extcap.ciscodump.remotecount: 
+
+# Set the log level
+# A string
+#extcap.ciscodump.loglevel: 
+
+# Use a file for logging
+# A string
+#extcap.ciscodump.logfile: 
+
+# Interface index
+# A string
+#extcap.dpauxmon.interface_id: 0
+
+# Set the log level
+# A string
+#extcap.dpauxmon.loglevel: 
+
+# Use a file for logging
+# A string
+#extcap.dpauxmon.logfile: 
+
 # Max bytes in a packet
 # A string
 #extcap.randpkt.maxbytes: 5000
@@ -443,6 +499,98 @@ capture.auto_scroll: FALSE
 # Use a file for logging
 # A string
 #extcap.randpkt.logfile: 
+
+# Starting position
+# A string
+#extcap.sdjournal.startfrom: 
+
+# Set the log level
+# A string
+#extcap.sdjournal.loglevel: 
+
+# Use a file for logging
+# A string
+#extcap.sdjournal.logfile: 
+
+# Remote SSH server address
+# A string
+#extcap.sshdump.remotehost: 
+
+# Remote SSH server port
+# A string
+#extcap.sshdump.remoteport: 
+
+# Remote SSH server username
+# A string
+#extcap.sshdump.remoteusername: 
+
+# Remote SSH server password
+# Password (never stored on disk)
+#extcap.sshdump.remotepassword: 
+
+# Path to SSH private key
+# A string
+#extcap.sshdump.sshkey: 
+
+# SSH key passphrase
+# Password (never stored on disk)
+#extcap.sshdump.sshkeypassphrase: 
+
+# ProxyCommand
+# A string
+#extcap.sshdump.proxycommand: 
+
+# Remote interface
+# A string
+#extcap.sshdump.remoteinterface: 
+
+# Remote capture command selection
+# A string
+#extcap.sshdump.remotecapturecommandselect: 
+
+# Remote capture command
+# A string
+#extcap.sshdump.remotecapturecommand: 
+
+# Use sudo on the remote machine
+# A string
+#extcap.sshdump.remotesudo: 
+
+# No promiscuous mode
+# A string
+#extcap.sshdump.remotenoprom: 
+
+# Remote capture filter
+# A string
+#extcap.sshdump.remotefilter: not ((host fe80::1210:c06d:d784:a595 or host 172.17.0.1 or host 192.168.100.103) and port 22)
+
+# Packets to capture
+# A string
+#extcap.sshdump.remotecount: 0
+
+# Set the log level
+# A string
+#extcap.sshdump.loglevel: 
+
+# Use a file for logging
+# A string
+#extcap.sshdump.logfile: 
+
+# Listen port
+# A string
+#extcap.udpdump.port: 5555
+
+# Payload type
+# A string
+#extcap.udpdump.payload: data
+
+# Set the log level
+# A string
+#extcap.udpdump.loglevel: 
+
+# Use a file for logging
+# A string
+#extcap.udpdump.logfile: 
 
 # Remote SSH server address
 # A string
@@ -495,130 +643,6 @@ capture.auto_scroll: FALSE
 # Use a file for logging
 # A string
 #extcap.wifidump.logfile: 
-
-# Remote SSH server address
-# A string
-#extcap.ciscodump.remotehost: 
-
-# Remote SSH server port
-# A string
-#extcap.ciscodump.remoteport: 22
-
-# Remote SSH server username
-# A string
-#extcap.ciscodump.remoteusername: betty
-
-# Remote SSH server password
-# Password (never stored on disk)
-#extcap.ciscodump.remotepassword: 
-
-# Path to SSH private key
-# A string
-#extcap.ciscodump.sshkey: 
-
-# ProxyCommand
-# A string
-#extcap.ciscodump.proxycommand: 
-
-# Remote interface
-# A string
-#extcap.ciscodump.remoteinterface: 
-
-# Remote capture filter
-# A string
-#extcap.ciscodump.remotefilter: deny tcp host 10.5.8.57 any eq 22, deny tcp any eq 22 host 10.5.8.57, deny tcp host fe80::c9:8282:2fd8:ec29 any eq 22, deny tcp any eq 22 host fe80::c9:8282:2fd8:ec29, deny tcp host fe80::7c45:8eaf:c3dd:4e8d any eq 22, deny tcp any eq 22 host fe80::7c45:8eaf:c3dd:4e8d, deny tcp host fe80::23f5:93e8:b241:d9f4 any eq 22, deny tcp any eq 22 host fe80::23f5:93e8:b241:d9f4, deny tcp host fe80::4543:507c:defa:eca6 any eq 22, deny tcp any eq 22 host fe80::4543:507c:defa:eca6, deny tcp host fe80::ce81:b1c:bd2c:69e any eq 22, deny tcp any eq 22 host fe80::ce81:b1c:bd2c:69e, deny tcp host fe80::8f75:fc3f:baac:3b81 any eq 22, deny tcp any eq 22 host fe80::8f75:fc3f:baac:3b81, deny tcp host fe80::c8cd:260a:a09c:5f7b any eq 22, deny tcp any eq 22 host fe80::c8cd:260a:a09c:5f7b, deny tcp host fe80::8b48:b79c:7f1e:7ba1 any eq 22, deny tcp any eq 22 host fe80::8b48:b79c:7f1e:7ba1, deny tcp host fe80::c0f:d5ff:fe58:20df any eq 22, deny tcp any eq 22 host fe80::c0f:d5ff:fe58:20df, deny tcp host fe80::c0f:d5ff:fe58:20df any eq 22, deny tcp any eq 22 host fe80::c0f:d5ff:fe58:20df, deny tcp host fe80::3ca6:f6ff:fe2a:664 any eq 22, deny tcp any eq 22 host fe80::3ca6:f6ff:fe2a:664, deny tcp host fe80::1 any eq 22, deny tcp any eq 22 host fe80::1, permit ip any any
-
-# Packets to capture
-# A string
-#extcap.ciscodump.remotecount: 
-
-# Set the log level
-# A string
-#extcap.ciscodump.loglevel: 
-
-# Use a file for logging
-# A string
-#extcap.ciscodump.logfile: 
-
-# Listen port
-# A string
-#extcap.udpdump.port: 5555
-
-# Payload type
-# A string
-#extcap.udpdump.payload: data
-
-# Set the log level
-# A string
-#extcap.udpdump.loglevel: 
-
-# Use a file for logging
-# A string
-#extcap.udpdump.logfile: 
-
-# Remote SSH server address
-# A string
-#extcap.sshdump.remotehost: 
-
-# Remote SSH server port
-# A string
-#extcap.sshdump.remoteport: 
-
-# Remote SSH server username
-# A string
-#extcap.sshdump.remoteusername: 
-
-# Remote SSH server password
-# Password (never stored on disk)
-#extcap.sshdump.remotepassword: 
-
-# Path to SSH private key
-# A string
-#extcap.sshdump.sshkey: 
-
-# SSH key passphrase
-# Password (never stored on disk)
-#extcap.sshdump.sshkeypassphrase: 
-
-# ProxyCommand
-# A string
-#extcap.sshdump.proxycommand: 
-
-# Remote interface
-# A string
-#extcap.sshdump.remoteinterface: 
-
-# Remote capture command selection
-# A string
-#extcap.sshdump.remotecapturecommandselect: 
-
-# Remote capture command
-# A string
-#extcap.sshdump.remotecapturecommand: 
-
-# Use sudo on the remote machine
-# A string
-#extcap.sshdump.remotesudo: 
-
-# No promiscuous mode
-# A string
-#extcap.sshdump.remotenoprom: 
-
-# Remote capture filter
-# A string
-#extcap.sshdump.remotefilter: not ((host 10.5.8.57 or host fe80::c9:8282:2fd8:ec29 or host fe80::7c45:8eaf:c3dd:4e8d or host fe80::23f5:93e8:b241:d9f4 or host fe80::4543:507c:defa:eca6 or host fe80::ce81:b1c:bd2c:69e or host fe80::8f75:fc3f:baac:3b81 or host fe80::c8cd:260a:a09c:5f7b or host fe80::8b48:b79c:7f1e:7ba1 or host fe80::c0f:d5ff:fe58:20df or host fe80::c0f:d5ff:fe58:20df or host fe80::3ca6:f6ff:fe2a:664 or host fe80::1) and port 22)
-
-# Packets to capture
-# A string
-#extcap.sshdump.remotecount: 0
-
-# Set the log level
-# A string
-#extcap.sshdump.loglevel: 
-
-# Use a file for logging
-# A string
-#extcap.sshdump.logfile: 
 
 ####### Name Resolution ########
 

@@ -174,7 +174,7 @@
 
 # Show the byte view in the packet details dialog
 # TRUE or FALSE (case-insensitive)
-gui.show_byteview_in_dialog: FALSE
+#gui.show_byteview_in_dialog: TRUE
 
 ####### User Interface: Colors ########
 
@@ -252,7 +252,7 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %m,%Gt,%Cus:dhcp.option.hostname:0:R,%Cus:tcp.stream:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:kerberos.CNameString:0:R,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R
+gui.column.hidden: %m,%Gt,%Cus:ip.ttl:0:R,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:tcp.stream:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -260,24 +260,29 @@ gui.column.format:
 	"No.", "%m",
 	"Time", "%t",
 	"Delta", "%Gt",
-	"Source", "%us",
+	"SRC IP", "%us",
 	"SRC port", "%uS",
-	"Destination", "%ud",
+	"DST IP", "%ud",
 	"DST port", "%uD",
 	"Protocol", "%p",
 	"TTL", "%Cus:ip.ttl:0:R",
 	"Window", "%Cus:tcp.window_size_value:0:R",
 	"DHCP Host", "%Cus:dhcp.option.hostname:0:R",
-	"Host", "%Cus:http.host or tls.handshake.extensions_server_name or dhcp.option.hostname or kerberos.CNameString:0:R",
+	"CNameString", "%Cus:kerberos.CNameString:0:R",
+	"Host", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString:0:R",
 	"Stream ID", "%Cus:tcp.stream:0:R",
 	"Expert Info", "%Cus:_ws.expert:0:R",
 	"Packet comments", "%Cus:pkt_comment:0:R",
 	"SeqNr (raw)", "%Cus:tcp.seq_raw:0:R",
 	"Length", "%L",
-	"CNameString", "%Cus:kerberos.CNameString:0:R",
 	"JA3", "%Cus:tls.handshake.ja3:0:R",
 	"JA3S", "%Cus:tls.handshake.ja3s:0:R",
 	"Time to live", "%Cus:dns.resp.ttl:0:R",
+	"Src or Dst GeoIP Country (Full)", "%Cus:ip.geoip.country:0:R",
+	"Country", "%Cus:ip.geoip.country_iso:0:R",
+	"Coloring Rule Name", "%Cus:frame.coloring_rule.name:0:R",
+	"Coloring Rule String", "%Cus:frame.coloring_rule.string:0:R",
+	"User-Agent", "%Cus:http.user_agent:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
@@ -343,7 +348,7 @@ gui.show_selected_packet.enabled: TRUE
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: wlan0(1),any(113),lo(1),eth0(1),docker0(1),bluetooth-monitor(254),nflog(239),nfqueue(228),dbus-system(231),dbus-session(231),ciscodump(147),dpauxmon(275),randpkt(147),sdjournal(147),sshdump(147),udpdump(252),wifidump(147)
+capture.devices_linktypes: wlan0(1),any(113),lo(1),eth0(1),docker0(1),bluetooth0(201),bluetooth-monitor(254),nflog(239),nfqueue(228),dbus-system(231),dbus-session(231),ciscodump(147),dpauxmon(275),randpkt(147),sdjournal(147),sshdump(147),udpdump(252),wifidump(147)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -359,15 +364,15 @@ capture.devices_linktypes: wlan0(1),any(113),lo(1),eth0(1),docker0(1),bluetooth-
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: wlan0(2),any(2),lo(2),eth0(2),docker0(2),bluetooth-monitor(2),nflog(2),nfqueue(2),dbus-system(2),dbus-session(2),vboxnet0(2),ciscodump(2),dpauxmon(2),randpkt(2),sdjournal(2),sshdump(2),udpdump(2),wifidump(2)
+capture.devices_buffersize: wlan0(2),any(2),lo(2),eth0(2),docker0(2),bluetooth0(2),bluetooth-monitor(2),nflog(2),nfqueue(2),dbus-system(2),dbus-session(2),ciscodump(2),dpauxmon(2),randpkt(2),sdjournal(2),sshdump(2),udpdump(2),wifidump(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: wlan0:0(262144),any:0(262144),lo:0(262144),eth0:0(262144),docker0:0(262144),bluetooth-monitor:0(262144),nflog:0(262144),nfqueue:0(262144),dbus-system:0(262144),dbus-session:0(262144),vboxnet0:0(262144),ciscodump:0(262144),dpauxmon:0(262144),randpkt:0(262144),sdjournal:0(262144),sshdump:0(262144),udpdump:0(262144),wifidump:0(262144)
+capture.devices_snaplen: wlan0:0(262144),any:0(262144),lo:0(262144),eth0:0(262144),docker0:0(262144),bluetooth0:0(262144),bluetooth-monitor:0(262144),nflog:0(262144),nfqueue:0(262144),dbus-system:0(262144),dbus-session:0(262144),ciscodump:0(262144),dpauxmon:0(262144),randpkt:0(262144),sdjournal:0(262144),sshdump:0(262144),udpdump:0(262144),wifidump:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth-monitor(1),nflog(1),nfqueue(1),dbus-system(1),dbus-session(1),vboxnet0(1),ciscodump(1),dpauxmon(1),randpkt(1),sdjournal(1),sshdump(1),udpdump(1),wifidump(1)
+capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bluetooth-monitor(1),nflog(1),nfqueue(1),dbus-system(1),dbus-session(1),ciscodump(1),dpauxmon(1),randpkt(1),sdjournal(1),sshdump(1),udpdump(1),wifidump(1)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
@@ -453,7 +458,7 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth-monito
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::84fb:4fb9:f048:29e1 any eq 22, deny tcp any eq 22 host fe80::84fb:4fb9:f048:29e1, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 172.20.10.8 any eq 22, deny tcp any eq 22 host 172.20.10.8, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::1210:c06d:d784:a595 any eq 22, deny tcp any eq 22 host fe80::1210:c06d:d784:a595, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 192.168.100.103 any eq 22, deny tcp any eq 22 host 192.168.100.103, permit ip any any
 
 # Packets to capture
 # A string
@@ -573,7 +578,7 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth-monito
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::84fb:4fb9:f048:29e1 or host 172.17.0.1 or host 172.20.10.8) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::1210:c06d:d784:a595 or host 172.17.0.1 or host 192.168.100.103) and port 22)
 
 # Packets to capture
 # A string

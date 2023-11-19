@@ -75,7 +75,7 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 353
+gui.geometry_main_upper_pane: 526
 
 # Main window middle pane size.
 # Decimal number.
@@ -87,7 +87,7 @@ column.width:
         %m, 60:C,
         %s, 123,
         %d, 123,
-        %t, 77:C,
+        %t, 92:C,
         %Tt, 104:C,
         %p, 89:C,
         %L, 81:C,
@@ -106,7 +106,7 @@ column.width:
         "%Cus:ip.id", 120,
         "%Cus:ip.proto", 89,
         "%Cus:ip.hdr_len", 130:C,
-        %i, 627
+        %i, 732
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -137,7 +137,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Wireshark/SharkFest23/Understanding and troubleshooting IPsec VPNs/Examples-SF23EU/
+gui.fileopen_remembered_dir: /home/void/Videos/YouTube/Wireshark/Wireshark_Security_Workshop-ISSA_NAC/PCAPs/Labs/Patch Tuesday/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
