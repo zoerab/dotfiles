@@ -125,6 +125,7 @@ set hidden
 set lazyredraw
 set backspace=indent,eol,start
 set listchars=tab:▏\ ,trail:~,eol:¬
+set binary noeol
 
 
 "-----------------------------------------------------"
