@@ -4,10 +4,11 @@
 ##         Category: DOTFILES                        #
 ##         Author:   Zoerab Tchahkiev                #
 ##         Link:     http://github.com/zoerab        #
-##         Version:  1.0                             #
-##         Revision: 12/2015                         #
+##         Version:  2.0                             #
+##         Revision: 20/11/2023						 #
 ##                                                   #
 ######################################################
+.directory
 #
 ## Ignore everything by default
 #*
