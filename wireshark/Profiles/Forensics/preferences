@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.0.10.
+# Configuration file for Wireshark 4.0.11.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -252,7 +252,7 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %m,%Gt,%Cus:ip.ttl:0:R,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:tcp.stream:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
+gui.column.hidden: %m,%Gt,%Cus:ip.ttl:0:R,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -269,7 +269,7 @@ gui.column.format:
 	"Window", "%Cus:tcp.window_size_value:0:R",
 	"DHCP Host", "%Cus:dhcp.option.hostname:0:R",
 	"CNameString", "%Cus:kerberos.CNameString:0:R",
-	"Host", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString:0:R",
+	"Host", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4:0:R",
 	"Stream ID", "%Cus:tcp.stream:0:R",
 	"Expert Info", "%Cus:_ws.expert:0:R",
 	"Packet comments", "%Cus:pkt_comment:0:R",

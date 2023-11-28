@@ -75,11 +75,11 @@ gui.allow_hover_selection: TRUE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 411
+gui.geometry_main_upper_pane: 395
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1280
+gui.geometry_main_lower_pane: 1289
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -87,17 +87,17 @@ column.width:
         %m, 0,
         %t, 155,
         %Gt, 0,
-        %us, 108,
+        %us, 139,
         %uS, 91:C,
-        %ud, 108,
+        %ud, 139,
         %uD, 92:C,
         %p, 89:C,
         "%Cus:ip.ttl", 0,
         "%Cus:tcp.window_size_value", 0,
         "%Cus:dhcp.option.hostname", 0,
         "%Cus:kerberos.CNameString", 0,
-        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString", 170,
-        "%Cus:tcp.stream", 0,
+        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 279,
+        "%Cus:tcp.stream", 99,
         "%Cus:_ws.expert", 0,
         "%Cus:pkt_comment", 0,
         "%Cus:tcp.seq_raw", 0,
@@ -110,7 +110,7 @@ column.width:
         "%Cus:frame.coloring_rule.name", 0,
         "%Cus:frame.coloring_rule.string", 0,
         "%Cus:http.user_agent", 0,
-        %i, 962
+        %i, 1184
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -138,7 +138,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Videos/NET - Advanced Wireshark Network Forensics/Advanced-Wireshark-Network-Forensics-master/
+gui.fileopen_remembered_dir: /home/void/Videos/NET - O'REILLY - Threat Hunting with Wireshark for SecOps/Traces/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
