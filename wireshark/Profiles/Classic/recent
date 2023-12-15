@@ -47,11 +47,11 @@ capture.auto_scroll: TRUE
 
 # Timestamp display format.
 # One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_YMD, ABSOLUTE_WITH_YDOY, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH, UTC, UTC_WITH_YMD, UTC_WITH_YDOY, UTC_WITH_DATE
-gui.time_format: UTC_WITH_YMD
+gui.time_format: RELATIVE
 
 # Timestamp display precision.
 # One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC, or a number between 0 and 9
-gui.time_precision: SEC
+gui.time_precision: AUTO
 
 # Seconds display format.
 # One of: SECONDS, HOUR_MIN_SEC
@@ -71,7 +71,7 @@ gui.bytes_encoding: FROM_PACKET
 
 # Packet diagram field values show (hide).
 # TRUE or FALSE (case-insensitive).
-gui.packet_diagram_field_values: FALSE
+gui.packet_diagram_field_values: TRUE
 
 # Allow hover selection in byte view.
 # TRUE or FALSE (case-insensitive).
@@ -91,49 +91,28 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 389
+gui.geometry_main_upper_pane: 459
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1289
+gui.geometry_main_lower_pane: 959
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, 60,
-        %t, 172,
-        %Gt, 0,
-        %us, 139,
-        %uS, 91:C,
-        %ud, 139,
-        %uD, 92:C,
-        %p, 89:C,
-        "%Cus:ip.ttl", 0,
-        "%Cus:tcp.window_size_value", 0,
-        "%Cus:dhcp.option.hostname", 0,
-        "%Cus:kerberos.CNameString", 0,
-        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 77,
-        "%Cus:tcp.stream", 99,
-        "%Cus:_ws.expert", 0,
-        "%Cus:pkt_comment", 0,
-        "%Cus:tcp.seq_raw", 0,
+        %t, 92,
+        %s, 170,
+        %d, 170,
+        %p, 89,
         %L, 81,
-        "%Cus:tls.handshake.ja3", 0,
-        "%Cus:tls.handshake.ja3s", 0,
-        "%Cus:dns.resp.ttl", 0,
-        "%Cus:ip.geoip.country", 0,
-        "%Cus:ip.geoip.country_iso", 87,
-        "%Cus:frame.coloring_rule.name", 0,
-        "%Cus:frame.coloring_rule.string", 0,
-        "%Cus:http.user_agent", 0,
-        %i, 807
+        %i, 1200
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
 gui.conversation_tabs: 
-	"Ethernet", "IEEE 802.11",
-	"IPv4", "TCP",
-	"UDP"
+	"Ethernet", "IPv4",
+	"TCP", "UDP"
 
 # Conversation dialog tabs columns.
 # List of conversation columns numbers.
