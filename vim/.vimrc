@@ -33,6 +33,7 @@ Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 "-----------------------------------------------------"
 " End of plugins
