@@ -118,18 +118,28 @@ set hidden
 set lazyredraw
 set backspace=indent,eol,start
 set listchars=tab:▏\ ,trail:~,eol:¬
+set binary noeol
+
+"-----------------------------------------------------"
+" Binary editing
+"-----------------------------------------------------"
+" Hex read
+nmap <leader>hr :%!xxd<CR> :set filetype=xxd<CR>
+" Hex write
+nmap <leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
+
 
 "-----------------------------------------------------"
 " Arrows are evil
 "-----------------------------------------------------"
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 
 "-----------------------------------------------------"

@@ -23,7 +23,7 @@ Plug 'tpope/vim-commentary'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'yggdroot/indentline'
@@ -126,6 +126,14 @@ set lazyredraw
 set backspace=indent,eol,start
 set listchars=tab:▏\ ,trail:~,eol:¬
 set binary noeol
+
+"-----------------------------------------------------"
+" Binary editing
+"-----------------------------------------------------"
+" Hex read
+nmap <leader>hr :%!xxd<CR> :set filetype=xxd<CR>
+" Hex write
+nmap <leader>hw :%!xxd -r<CR> :set binary<CR> :set filetype=<CR>
 
 
 "-----------------------------------------------------"
@@ -348,19 +356,19 @@ nmap <leader>mq :MarkedQuit<cr>
 "-----------------------------------------------------"
 " Toggle Syntastic
 "-----------------------------------------------------"
-nmap <leader>s :SyntasticToggleMode<cr>
+" nmap <leader>s :SyntasticToggleMode<cr>
 
 
 "-----------------------------------------------------"
 " Undotree configurations
 "-----------------------------------------------------"
-nnoremap <F5> :UndotreeToggle<cr>
-if has("persistent_undo")
-  set undodir=~/.undodir/
-  set undofile
-endif
+" nnoremap <F5> :UndotreeToggle<cr>
+" if has("persistent_undo")
+  " set undodir=~/.undodir/
+  " set undofile
+" endif
 " Window layout style
-let g:undotree_WindowLayout = 4
+" let g:undotree_WindowLayout = 4
 
 
 "-----------------------------------------------------"
