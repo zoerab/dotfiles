@@ -315,7 +315,7 @@ function zeek_session_size() {
 
 # TShark stuff
 #
-# Requirements: tshark
+# Requirements: tshark, xxd
 #
 ## Counting FQDNs per domain
 function tshark_count_fqdn_per_domain() {
@@ -352,13 +352,35 @@ function tshark_show_rev_fqdn() {
 }
 
 ## Show data in packets (ICMP exfil)
-#function tshark_packet_data() {
-#    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
-#    then
-#        echo "Usage: tshark_packet_data <capture.pcapng>" # tshark_show_rev_fqdn mycapture.pcapng
-#        return
-#    fi
-#
-#    tshark -r "$1" -n -T fields -Y data.data -e data.data | xxd -r -p | less -S
-#}
+function tshark_icmp_data() {
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then
+        echo "Usage: tshark_packet_data <capture.pcapng>" # tshark_show_rev_fqdn mycapture.pcapng
+        return
+    fi
+
+    tshark -r "$1" -n -T fields -Y data.data -e data.data | xxd -r -p | less -S
+}
+
+## Show data in packets (UDP exfil)
+function tshark_udp_data() {
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then
+        echo "Usage: tshark_packet_data <capture.pcapng>" # tshark_show_rev_fqdn mycapture.pcapng
+        return
+    fi
+
+    tshark -r "$1" -T fields -e udp.payload | xxd -r -p | less -S
+}
+
+## Show data in packets (TCP exfil)
+function tshark_tcp_data() {
+    if [[ ( $@ == "--help") ||  $@ == "-h" || -z "$@" ]]
+    then
+        echo "Usage: tshark_packet_data <capture.pcapng>" # tshark_show_rev_fqdn mycapture.pcapng
+        return
+    fi
+
+    tshark -r "$1" -T fields -e tcp.payload | xxd -r -p | less -S
+}
 
