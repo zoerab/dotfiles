@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.0.10.
+# Recent settings file for Wireshark 4.2.2.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -41,13 +41,17 @@ gui.statusbar_show: TRUE
 # TRUE or FALSE (case-insensitive).
 gui.packet_list_colorize: TRUE
 
+# Auto scroll packet list when capturing.
+# TRUE or FALSE (case-insensitive).
+capture.auto_scroll: TRUE
+
 # Timestamp display format.
 # One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_YMD, ABSOLUTE_WITH_YDOY, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH, UTC, UTC_WITH_YMD, UTC_WITH_YDOY, UTC_WITH_DATE
 gui.time_format: RELATIVE
 
 # Timestamp display precision.
-# One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC
-gui.time_precision: AUTO
+# One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC, or a number between 0 and 9
+gui.time_precision: USEC
 
 # Seconds display format.
 # One of: SECONDS, HOUR_MIN_SEC
@@ -58,7 +62,7 @@ gui.seconds_format: SECONDS
 gui.zoom_level: 0
 
 # Bytes view display type.
-# One of: HEX, BITS
+# One of: HEX, BITS, DEC, OCT
 gui.bytes_view: HEX
 
 # Bytes view text encoding.
@@ -73,9 +77,21 @@ gui.packet_diagram_field_values: TRUE
 # TRUE or FALSE (case-insensitive).
 gui.allow_hover_selection: TRUE
 
+# Follow stream show as.
+# One of: ASCII, ASCII_CONTROL, C_ARRAYS, EBCDIC, HEX_DUMP, HTML, IMAGE, JSON, RAW, RUST_ARRAY, UTF-8, YAML
+gui.follow_show: ASCII
+
+# Show packet bytes decode as.
+# One of: NONE, BASE64, COMPRESSED, HEX_DIGITS, PERCENT_ENCODING, QUOTED_PRINTABLE, ROT13
+gui.show_bytes_decode: NONE
+
+# Show packet bytes show as.
+# One of: ASCII, ASCII_CONTROL, C_ARRAYS, EBCDIC, HEX_DUMP, HTML, IMAGE, JSON, RAW, RUST_ARRAY, UTF-8, YAML
+gui.show_bytes_show: ASCII
+
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 461
+gui.geometry_main_upper_pane: 448
 
 # Main window middle pane size.
 # Decimal number.
@@ -85,20 +101,24 @@ gui.geometry_main_lower_pane: 1271
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, 60:L,
-        %t, 116,
-        %Gt, 100,
+        %t, 69,
+        %Gt, 80,
         "%Cus:tcp.srcport", 0,
-        %s, 139,
-        %d, 139,
+        %s, 202,
+        %d, 170,
         "%Cus:tcp.dstport", 0,
         "%Cus:tcp.srcport", 0,
         "%Cus:udp.dstport or tcp.dstport", 0,
         %p, 89,
         "%Cus:ip.geoip.org", 0,
         "%Cus:ip.geoip.country", 0,
-        "%Cus:tcp.len or udp.length", 145:L,
         "%Cus:frame.len", 0,
-        %i, 1128
+        "%Cus:tcp.stream", 82,
+        "%Cus:tcp.len or udp.length", 139:C,
+        "%Cus:tcp.seq", 81:C,
+        "%Cus:tcp.ack", 81:C,
+        "%Cus:tcp.seq_raw", 115:C,
+        %i, 694
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -125,7 +145,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Wireshark/SharkFest23/Understanding and troubleshooting IPsec VPNs/Examples-SF23EU/
+gui.fileopen_remembered_dir: /home/void/Videos/NET - O'REILLY - Threat Hunting with Wireshark for SecOps/Traces/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

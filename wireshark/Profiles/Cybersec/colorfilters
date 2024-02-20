@@ -8,7 +8,7 @@
 @Invalid TCP packets@(tcp.flags.syn==1 and tcp.window_size == 0)@[65535,65535,65535][65535,0,0]
 @TCP Expert Warning@tcp.analysis.flags and not (tcp.analysis.keep_alive or tcp.analysis.keep_alive_ack or tcp.analysis.window_update)@[0,0,0][65535,11565,6939]
 @TrickbotClient@tls.handshake.ja3 == "6734f37431670b3ab4292b8f60f29984"@[65535,65535,65535][65535,10280,771]
-@TCP Syn@tcp.flags.syn==1@[8995,65535,1542][0,0,0]
+@TCP Syn@tcp.flags.syn==1@[44975,65535,771][0,0,0]
 @TCP Fin@tcp.flags.fin == 1@[17476,57054,65535][0,0,0]
 @ARP@arp@[64250,61680,55255][4626,10023,11822]
 @ICMP@icmp || icmpv6@[64764,57568,65535][4626,10023,11822]

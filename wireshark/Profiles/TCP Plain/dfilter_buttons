@@ -28,3 +28,5 @@
 "TRUE","Rogue DHCP","(dhcp.option.dhcp == 2) && !(dhcp.ip.your == 10.1.1.0/24)",""
 "FALSE","Slow HTTP","http.time > 0.050",""
 "TRUE","Signatures//NullScan","tcp.flags == 0",""
+"TRUE","TCP Conn // SYN only","tcp.flags == 0x0002",""
+"TRUE","Signatures // Very Low SEQ nr.","tcp.seq_raw < 100000",""

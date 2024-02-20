@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.2.0.
+# Configuration file for Wireshark 4.2.3.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -31,7 +31,7 @@
 
 # Directory to start in when opening File Open dialog.
 # A path to a directory
-#gui.fileopen.dir: /home/void/Documents/CURSUS/Pluralsight/Wireshark - Identify Common Cyber Network Attacks/03/demos
+#gui.fileopen.dir: /home/void/Documents/CURSUS/Pluralsight/Network Protocols for Security - SMB
 
 # The preview timeout in the File Open dialog
 # A decimal number
@@ -268,14 +268,14 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %Gt,%Cus:ip.ttl:0:R,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
+gui.column.hidden: %Cus:ip.ttl:0:R,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
 gui.column.format: 
 	"No.", "%m",
-	"Time", "%t",
 	"Delta", "%Gt",
+	"Time", "%t",
 	"SRC IP", "%us",
 	"SRC port", "%uS",
 	"DST IP", "%ud",
@@ -468,6 +468,10 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 # A string
 #extcap.ciscodump.proxycommand: 
 
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.ciscodump.sshsha1: 
+
 # Remote interface
 # A string
 #extcap.ciscodump.remoteinterface: 
@@ -572,6 +576,10 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 # A string
 #extcap.sshdump.proxycommand: 
 
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.sshdump.sshsha1: 
+
 # Remote interface
 # A string
 #extcap.sshdump.remoteinterface: 
@@ -651,6 +659,10 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 # SSH key passphrase
 # Password (never stored on disk)
 #extcap.wifidump.sshkeypassphrase: 
+
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.wifidump.sshsha1: 
 
 # Remote interface
 # A string
@@ -1576,7 +1588,7 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 # TRUE or FALSE (case-insensitive)
 #camel.persistentsrt: FALSE
 
-# Whether the CAN ID/flags field should be byte-swapped
+# Whether the CAN ID/flags field should be byte-swapped in CAN classic and CAN FD packets
 # TRUE or FALSE (case-insensitive)
 #can.byte_swap: FALSE
 
@@ -5505,6 +5517,10 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 # Detect ASAM CMP messages and the ASAM CMP dissector handle them.
 # TRUE or FALSE (case-insensitive)
 #tecmp.detect_asam_cmp: TRUE
+
+# Ignore Device IDs 0xff00-0xffff (user-defined range) for ASAM CMP Detection
+# TRUE or FALSE (case-insensitive)
+#tecmp.detect_asam_cmp_ignore_user_defined: TRUE
 
 # Whether the captured data include carrier number
 # TRUE or FALSE (case-insensitive)

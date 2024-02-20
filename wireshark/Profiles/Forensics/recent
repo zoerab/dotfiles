@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.2.0.
+# Recent settings file for Wireshark 4.2.3.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -47,11 +47,11 @@ capture.auto_scroll: TRUE
 
 # Timestamp display format.
 # One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_YMD, ABSOLUTE_WITH_YDOY, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH, UTC, UTC_WITH_YMD, UTC_WITH_YDOY, UTC_WITH_DATE
-gui.time_format: UTC_WITH_YMD
+gui.time_format: UTC
 
 # Timestamp display precision.
 # One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC, or a number between 0 and 9
-gui.time_precision: SEC
+gui.time_precision: USEC
 
 # Seconds display format.
 # One of: SECONDS, HOUR_MIN_SEC
@@ -91,28 +91,28 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 389
+gui.geometry_main_upper_pane: 370
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1289
+gui.geometry_main_lower_pane: 1223
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, 60,
-        %t, 172,
-        %Gt, 0,
-        %us, 139,
+        %m, 68,
+        %Gt, 71,
+        %t, 123,
+        %us, 201,
         %uS, 91:C,
-        %ud, 139,
+        %ud, 201,
         %uD, 92:C,
         %p, 89:C,
         "%Cus:ip.ttl", 0,
         "%Cus:tcp.window_size_value", 0,
         "%Cus:dhcp.option.hostname", 0,
         "%Cus:kerberos.CNameString", 0,
-        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 77,
+        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 67,
         "%Cus:tcp.stream", 99,
         "%Cus:_ws.expert", 0,
         "%Cus:pkt_comment", 0,
@@ -126,7 +126,7 @@ column.width:
         "%Cus:frame.coloring_rule.name", 0,
         "%Cus:frame.coloring_rule.string", 0,
         "%Cus:http.user_agent", 0,
-        %i, 807
+        %i, 1394
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -154,7 +154,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Pluralsight/Wireshark - Identify Common Cyber Network Attacks/03/demos/
+gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Pluralsight/Network Protocols for Security - SMB/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
