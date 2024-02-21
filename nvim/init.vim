@@ -246,7 +246,7 @@ nmap mcl <Plug>CommentaryLine
 "autocmd FocusLost * :wa
 " ignoring warnings about untitled buffers
 "-----------------------------------------------------"
-autocmd FocusLost * silent! wa
+" autocmd FocusLost * silent! wa
 
 
 "-----------------------------------------------------"
