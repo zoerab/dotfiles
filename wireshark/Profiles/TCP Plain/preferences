@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.2.2.
+# Configuration file for Wireshark 4.2.3.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -31,7 +31,7 @@
 
 # Directory to start in when opening File Open dialog.
 # A path to a directory
-#gui.fileopen.dir: /home/void/Documents/CURSUS/OReilly TCP-IP Deep Dive with Wireshark for NetOps and SecOps/Pearson-TCP-main/OReillyTCP
+#gui.fileopen.dir: /home/void/Documents/CURSUS/Active_Countermeasures_Getting_Started_With_Packet_Decoding/lab1
 
 # The preview timeout in the File Open dialog
 # A decimal number
@@ -268,7 +268,7 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %Cus:tcp.srcport:0:R,%Cus:tcp.dstport:0:R,%Cus:tcp.srcport:0:R,%Cus:udp.dstport or tcp.dstport:0:R,%Cus:ip.geoip.org:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.len:0:R
+gui.column.hidden: %Cus:tcp.srcport:0:R,%Cus:tcp.dstport:0:R,%Cus:tcp.srcport:0:R,%Cus:udp.dstport or tcp.dstport:0:R,%Cus:ip.geoip.org:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.len:0:R,%Cus:tcp.len or udp.length:0:R,%Cus:tcp.seq_raw:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -286,10 +286,13 @@ gui.column.format:
 	"Source or Destination GeoIP AS Organization", "%Cus:ip.geoip.org:0:R",
 	"Source or Destination GeoIP Country", "%Cus:ip.geoip.country:0:R",
 	"Frame length on the wire", "%Cus:frame.len:0:R",
-	"Stream", "%Cus:tcp.stream:0:R",
+	"TCP Flags", "%Cus:tcp.flags.str:0:R",
 	"TCP/UDP Length", "%Cus:tcp.len or udp.length:0:R",
+	"Stream", "%Cus:tcp.stream:0:R",
 	"SEQ nr.", "%Cus:tcp.seq:0:R",
 	"ACK nr.", "%Cus:tcp.ack:0:R",
+	"nSEQ", "%Cus:tcp.nxtseq:0:R",
+	"TCP Segment Len", "%Cus:tcp.len:0:R",
 	"SEQ nr. (raw)", "%Cus:tcp.seq_raw:0:R",
 	"Info", "%i"
 
@@ -460,6 +463,10 @@ capture.devices_pmode: en0(1),vmenet3(1),wifidump(1)
 # A string
 #extcap.ciscodump.proxycommand: 
 
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.ciscodump.sshsha1: 
+
 # Remote interface
 # A string
 #extcap.ciscodump.remoteinterface: 
@@ -564,6 +571,10 @@ capture.devices_pmode: en0(1),vmenet3(1),wifidump(1)
 # A string
 #extcap.sshdump.proxycommand: 
 
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.sshdump.sshsha1: 
+
 # Remote interface
 # A string
 #extcap.sshdump.remoteinterface: 
@@ -643,6 +654,10 @@ capture.devices_pmode: en0(1),vmenet3(1),wifidump(1)
 # SSH key passphrase
 # Password (never stored on disk)
 #extcap.wifidump.sshkeypassphrase: 
+
+# Support SHA-1 keys (deprecated)
+# A string
+#extcap.wifidump.sshsha1: 
 
 # Remote interface
 # A string
@@ -1568,7 +1583,7 @@ nameres.use_external_name_resolver: FALSE
 # TRUE or FALSE (case-insensitive)
 #camel.persistentsrt: FALSE
 
-# Whether the CAN ID/flags field should be byte-swapped
+# Whether the CAN ID/flags field should be byte-swapped in CAN classic and CAN FD packets
 # TRUE or FALSE (case-insensitive)
 #can.byte_swap: FALSE
 

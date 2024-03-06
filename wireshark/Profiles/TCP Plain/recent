@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.2.2.
+# Recent settings file for Wireshark 4.2.3.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -91,21 +91,21 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 448
+gui.geometry_main_upper_pane: 437
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1271
+gui.geometry_main_lower_pane: 953
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, 60:L,
-        %t, 69,
-        %Gt, 80,
+        %m, 75:L,
+        %t, 84,
+        %Gt, 71,
         "%Cus:tcp.srcport", 0,
-        %s, 202,
-        %d, 170,
+        %s, 123,
+        %d, 123,
         "%Cus:tcp.dstport", 0,
         "%Cus:tcp.srcport", 0,
         "%Cus:udp.dstport or tcp.dstport", 0,
@@ -113,12 +113,15 @@ column.width:
         "%Cus:ip.geoip.org", 0,
         "%Cus:ip.geoip.country", 0,
         "%Cus:frame.len", 0,
+        "%Cus:tcp.flags.str", 100,
+        "%Cus:tcp.len or udp.length", 0:C,
         "%Cus:tcp.stream", 82,
-        "%Cus:tcp.len or udp.length", 139:C,
         "%Cus:tcp.seq", 81:C,
         "%Cus:tcp.ack", 81:C,
-        "%Cus:tcp.seq_raw", 115:C,
-        %i, 694
+        "%Cus:tcp.nxtseq", 71,
+        "%Cus:tcp.len", 145,
+        "%Cus:tcp.seq_raw", 0:C,
+        %i, 791
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -145,7 +148,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Videos/NET - O'REILLY - Threat Hunting with Wireshark for SecOps/Traces/
+gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Active_Countermeasures_Getting_Started_With_Packet_Decoding/lab1/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

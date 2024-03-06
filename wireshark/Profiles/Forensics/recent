@@ -91,11 +91,11 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 370
+gui.geometry_main_upper_pane: 460
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 1223
+gui.geometry_main_lower_pane: 1022
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -103,17 +103,19 @@ column.width:
         %m, 68,
         %Gt, 71,
         %t, 123,
-        %us, 201,
-        %uS, 91:C,
-        %ud, 201,
-        %uD, 92:C,
+        %us, 116,
+        "%Cus:tcp.srcport or udp.srcport", 108,
+        %uS, 0:C,
+        %ud, 116,
+        "%Cus:tcp.dstport or udp.dstport", 108,
+        %uD, 0:C,
         %p, 89:C,
-        "%Cus:ip.ttl", 0,
         "%Cus:tcp.window_size_value", 0,
         "%Cus:dhcp.option.hostname", 0,
         "%Cus:kerberos.CNameString", 0,
-        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 67,
+        "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4", 116,
         "%Cus:tcp.stream", 99,
+        "%Cus:ip.ttl", 60,
         "%Cus:_ws.expert", 0,
         "%Cus:pkt_comment", 0,
         "%Cus:tcp.seq_raw", 0,
@@ -122,11 +124,11 @@ column.width:
         "%Cus:tls.handshake.ja3s", 0,
         "%Cus:dns.resp.ttl", 0,
         "%Cus:ip.geoip.country", 0,
-        "%Cus:ip.geoip.country_iso", 87,
+        "%Cus:ip.geoip.country_iso", 87:C,
         "%Cus:frame.coloring_rule.name", 0,
         "%Cus:frame.coloring_rule.string", 0,
         "%Cus:http.user_agent", 0,
-        %i, 1394
+        %i, 674
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -154,7 +156,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Pluralsight/Network Protocols for Security - SMB/
+gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Pluralsight/Identify Common Cyber Network Attacks with Wireshark/identify-common-cyber-network-attacks-wireshark/03/demos/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

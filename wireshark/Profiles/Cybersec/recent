@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 4.2.2.
+# Recent settings file for Wireshark 4.2.3.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -91,7 +91,7 @@ gui.show_bytes_show: ASCII
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 433
+gui.geometry_main_upper_pane: 421
 
 # Main window middle pane size.
 # Decimal number.
@@ -146,7 +146,7 @@ gui.endpoint_tabs_columns:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/void/Videos/NET - O'REILLY - Threat Hunting with Wireshark for SecOps/Traces/
+gui.fileopen_remembered_dir: /home/void/Documents/CURSUS/Pluralsight/Identify Common Cyber Network Attacks with Wireshark/identify-common-cyber-network-attacks-wireshark/03/demos/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
