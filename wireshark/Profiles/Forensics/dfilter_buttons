@@ -3,7 +3,7 @@
 "TRUE","TCP // TCP SYN/ACK","tcp.flags == 0x0012",""
 "TRUE","TCP // TCP SYNs no MSS","tcp.flags == 0x0002 and !tcp.options.mss_val","Packets without MSS might be an indication of scanning (fingerprinting most of the time)"
 "TRUE","TCP // TCP ACK","tcp.flags == 0x0010",""
-"TRUE","TCP // TCP-analysis","tcp.analysis.flags",""
+"TRUE","TCP // TCP Analysis","tcp.analysis.flags",""
 "TRUE","TCP // TCP Contains","tcp contains *","Replace asterisk (*) with your searchterm"
 "TRUE","TCP // TCP Weird Resets","((tcp.flags.reset eq 1) && (tcp.seq eq 1)) && (tcp.ack eq 1)",""
 "TRUE","TCP // TCP No Flags","tcp.flags == 0x0000",""
