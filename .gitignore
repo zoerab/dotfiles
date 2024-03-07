@@ -9,7 +9,7 @@
 ##                                                   #
 ######################################################
 .directory
-recent
+**/recent
 #
 ## Ignore everything by default
 #*
