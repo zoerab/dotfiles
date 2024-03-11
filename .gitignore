@@ -10,6 +10,7 @@
 ######################################################
 .directory
 **/recent
+**/.directory
 #
 ## Ignore everything by default
 #*
