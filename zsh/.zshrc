@@ -17,6 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="alien/alien"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
