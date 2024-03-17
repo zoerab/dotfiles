@@ -69,7 +69,6 @@
 "TRUE","ATTACK // WLAN Client disassociation","wlan.fc.type_subtype == 10","mdk3, mdk4"
 "TRUE","ATTACK // WLAN Fake AP beacon flood","wlan.fc.type_subtype == 8","mdk3, mdk4"
 "TRUE","ATTACK // WLAN Authentication DoS","wlan.fc.type_subtype == 11","mdk3, mdk4"
-"TRUE","ATTACK // Shell / Python scripts","frame matches \x22bin\x22 || frame matches \x22bash\x22 || frame matches \x22sh\x22 || frame matches \x22python\x22",""
 "TRUE","ATTACK // Privileged Accounts Brute Force","frame matches \x22(root|admin|administrator|sysadmin|user|test|guest|info|adm|mysql|user1|administrator1|rootuser|admin1|msfadmin)\x22",""
 "TRUE","SCAN // ARP // ARP scan","arp.dst.hw_mac==00:00:00:00:00:00","arp-scan -l"
 "TRUE","SCAN // ARP // ARP requests","arp.opcode == 1",""
