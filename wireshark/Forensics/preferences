@@ -31,7 +31,7 @@
 
 # Directory to start in when opening File Open dialog.
 # A path to a directory
-#gui.fileopen.dir: /home/void/Documents/CURSUS/Pluralsight/Using Wireshark Command Line Tools/using-wireshark-command-line-tools/05/demos/demos
+#gui.fileopen.dir: /home/void/Documents/CURSUS/Pluralsight/Analyzing Network Protocols with Wireshark/wireshark-analyzing-network-protocols/05/demos
 
 # The preview timeout in the File Open dialog
 # A decimal number
@@ -286,7 +286,7 @@ gui.column.format:
 	"Window", "%Cus:tcp.window_size_value:0:R",
 	"DHCP Host", "%Cus:dhcp.option.hostname:0:R",
 	"CNameString", "%Cus:kerberos.CNameString:0:R",
-	"Host / Query", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4 or dns.qry.name:0:U",
+	"Host / Query", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4 or dns.qry.name or snmp.community or dhcp.option.hostname or dhcp.server:0:U",
 	"Stream ID", "%Cus:tcp.stream:0:R",
 	"TTL", "%Cus:ip.ttl:0:R",
 	"Expert Info", "%Cus:_ws.expert:0:R",
