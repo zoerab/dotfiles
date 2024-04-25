@@ -11,6 +11,18 @@
 .directory
 **/recent
 **/.directory
+**/preferences
+**/recent
+**/recent_common
+**/ssl_keys
+**/GeoIP*
+**/*.lua
+**/plugins/
+**/extcap/
+**/*.log
+**/*.tmp
+**/*.temp
+
 #
 ## Ignore everything by default
 #*
