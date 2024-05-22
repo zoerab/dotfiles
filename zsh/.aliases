@@ -103,6 +103,12 @@ function addhost() {
     fi
 }
 
+# Defang an IP or FQDN
+defang() {
+	local ip="$1"
+    echo "${ip//./[.]}"
+}
+
 # Check for unsigned kernel modules
 function checkForUnsignedKernelMods() {
   for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "signature" || echo "no signature for module: ${mod}" ; done
