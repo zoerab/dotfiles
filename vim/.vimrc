@@ -29,6 +29,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf',                    { 'dir': '~/.fzf', 'do': './install --all'  }
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
@@ -351,4 +352,3 @@ let g:undotree_WindowLayout = 4
 " Quit with :Q
 "-----------------------------------------------------"
 command -nargs=0 Quit :qa!
-
