@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 4.2.3.
+# Configuration file for Wireshark 4.2.6.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -31,7 +31,7 @@
 
 # Directory to start in when opening File Open dialog.
 # A path to a directory
-#gui.fileopen.dir: /home/void/Documents/CURSUS/Pluralsight/Analyzing Network Protocols with Wireshark/wireshark-analyzing-network-protocols/05/demos
+#gui.fileopen.dir: /home/void
 
 # The preview timeout in the File Open dialog
 # A decimal number
@@ -83,7 +83,7 @@
 # A decimal number
 #gui.update.interval: 86400
 
-# How long to wait (in milliseconds) before processing                                   computationally intensive user input.                                   If you type quickly, consider lowering the value for a 'snappier'                                   experience.                                   If you type slowly, consider increasing the value to avoid performance issues.                                   This is currently used to delay searches in View -> Internals -> Supported Protocols                                   and Preferences -> Advanced menu.
+# How long to wait (in milliseconds) before processing computationally intensive user input. If you type quickly, consider lowering the value for a 'snappier' experience. If you type slowly, consider increasing the value to avoid performance issues. This is currently used to delay searches in View -> Internals -> Supported Protocols and Preferences -> Advanced menu.
 # A decimal number
 #gui.debounce.timer: 400
 
@@ -120,7 +120,7 @@
 # A decimal number
 #gui.max_tree_items: 1000000
 
-# The maximum depth of the dissection tree (Increase with caution)
+# The maximum depth for dissection tree and protocol layer checks. (Increase with caution)
 # A decimal number
 #gui.max_tree_depth: 500
 
@@ -268,14 +268,14 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %uS,%uD,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:ip.ttl:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
+gui.column.hidden: %Gt,%uS,%uD,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:ip.ttl:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
 gui.column.format: 
 	"No.", "%m",
-	"Delta", "%Gt",
 	"Time", "%t",
+	"Delta", "%Gt",
 	"SRC IP", "%us",
 	"SRC port", "%Cus:tcp.srcport or udp.srcport:0:R",
 	"SRC port raw", "%uS",
@@ -286,8 +286,8 @@ gui.column.format:
 	"Window", "%Cus:tcp.window_size_value:0:R",
 	"DHCP Host", "%Cus:dhcp.option.hostname:0:R",
 	"CNameString", "%Cus:kerberos.CNameString:0:R",
-	"Host / Query", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4 or dns.qry.name or snmp.community or dhcp.option.hostname or dhcp.server:0:U",
-	"Stream ID", "%Cus:tcp.stream:0:R",
+	"Host / Query", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4 or dns.qry.name or dhcp.fqdn.name or dhcp.option.hostname:0:U",
+	"Stream ID", "%Cus:tcp.stream or udp.stream:0:R",
 	"TTL", "%Cus:ip.ttl:0:R",
 	"Expert Info", "%Cus:_ws.expert:0:R",
 	"Packet comments", "%Cus:pkt_comment:0:R",
@@ -366,7 +366,7 @@ gui.show_selected_packet.enabled: TRUE
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: wlan0(1),any(113),lo(1),eth0(1),docker0(1),bluetooth0(201),bluetooth-monitor(254),nflog(239),nfqueue(228),dbus-system(231),dbus-session(231),ciscodump(147),dpauxmon(275),randpkt(147),sdjournal(147),sshdump(147),udpdump(252),wifidump(147)
+capture.devices_linktypes: enp0s13f0u1u4(1),any(113),lo(1),enp0s31f6(1),docker0(1),bluetooth-monitor(254),nflog(239),nfqueue(228),dbus-system(231),dbus-session(231),ciscodump(147),dpauxmon(275),randpkt(147),sdjournal(147),sshdump(147),udpdump(252),wifidump(147)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -382,15 +382,15 @@ capture.devices_linktypes: wlan0(1),any(113),lo(1),eth0(1),docker0(1),bluetooth0
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: wlan0(2),any(2),lo(2),eth0(2),docker0(2),bluetooth0(2),bluetooth-monitor(2),nflog(2),nfqueue(2),dbus-system(2),dbus-session(2),ciscodump(2),dpauxmon(2),randpkt(2),sdjournal(2),sshdump(2),udpdump(2),wifidump(2)
+capture.devices_buffersize: enp0s13f0u1u4(2),any(2),lo(2),enp0s31f6(2),docker0(2),wlp0s20f3(2),bluetooth-monitor(2),nflog(2),nfqueue(2),dbus-system(2),dbus-session(2),ciscodump(2),dpauxmon(2),randpkt(2),sdjournal(2),sshdump(2),udpdump(2),wifidump(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: wlan0:0(262144),any:0(262144),lo:0(262144),eth0:0(262144),docker0:0(262144),bluetooth0:0(262144),bluetooth-monitor:0(262144),nflog:0(262144),nfqueue:0(262144),dbus-system:0(262144),dbus-session:0(262144),ciscodump:0(262144),dpauxmon:0(262144),randpkt:0(262144),sdjournal:0(262144),sshdump:0(262144),udpdump:0(262144),wifidump:0(262144)
+capture.devices_snaplen: enp0s13f0u1u4:0(262144),any:0(262144),lo:0(262144),enp0s31f6:0(262144),docker0:0(262144),wlp0s20f3:0(262144),bluetooth-monitor:0(262144),nflog:0(262144),nfqueue:0(262144),dbus-system:0(262144),dbus-session:0(262144),ciscodump:0(262144),dpauxmon:0(262144),randpkt:0(262144),sdjournal:0(262144),sshdump:0(262144),udpdump:0(262144),wifidump:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bluetooth-monitor(1),nflog(1),nfqueue(1),dbus-system(1),dbus-session(1),ciscodump(1),dpauxmon(1),randpkt(1),sdjournal(1),sshdump(1),udpdump(1),wifidump(1)
+capture.devices_pmode: enp0s13f0u1u4(1),any(1),lo(1),enp0s31f6(1),docker0(1),wlp0s20f3(1),bluetooth-monitor(1),nflog(1),nfqueue(1),dbus-system(1),dbus-session(1),ciscodump(1),dpauxmon(1),randpkt(1),sdjournal(1),sshdump(1),udpdump(1),wifidump(1)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
@@ -480,7 +480,7 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::1210:c06d:d784:a595 any eq 22, deny tcp any eq 22 host fe80::1210:c06d:d784:a595, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 192.168.100.103 any eq 22, deny tcp any eq 22 host 192.168.100.103, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::bcee:3031:3177:cb3e any eq 22, deny tcp any eq 22 host fe80::bcee:3031:3177:cb3e, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 143.129.254.164 any eq 22, deny tcp any eq 22 host 143.129.254.164, permit ip any any
 
 # Packets to capture
 # A string
@@ -608,7 +608,7 @@ capture.devices_pmode: wlan0(1),any(1),lo(1),eth0(1),docker0(1),bluetooth0(1),bl
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::1210:c06d:d784:a595 or host 172.17.0.1 or host 192.168.100.103) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::bcee:3031:3177:cb3e or host 172.17.0.1 or host 143.129.254.164) and port 22)
 
 # Packets to capture
 # A string
