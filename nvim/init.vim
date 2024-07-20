@@ -23,7 +23,7 @@ Plug 'tpope/vim-commentary'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'mbbill/undotree'
+Plug 'mbbill/undotree'
 Plug 'sjl/vitality.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'yggdroot/indentline'
@@ -33,7 +33,6 @@ Plug 'scrooloose/nerdtree',             {'on': 'NERDTreeToggle'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
 
 "-----------------------------------------------------"
 " End of plugins
@@ -53,13 +52,11 @@ let g:mapleader=","
 "-----------------------------------------------------"
 syntax enable
 set background=dark
+let g:gruvbox_vert_split = 'bg2'
+let g:gruvbox_contrast_dark = 'hard'
 " set background=light
-" let g:gruvbox_vert_split = 'bg2'
-" let g:gruvbox_contrast_dark = 'hard'
-"set background=light
-"let g:gruvbox_contrast_light = 'hard'
-" colorscheme gruvbox
-colorscheme PaperColor
+let g:gruvbox_contrast_light = 'hard'
+colorscheme gruvbox
 
 
 "-----------------------------------------------------"
@@ -67,6 +64,7 @@ colorscheme PaperColor
 "-----------------------------------------------------"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme = 'luna'
 let g:airline_theme = 'gruvbox'
 
 
