@@ -35,7 +35,7 @@ alias 4chandl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-p
 alias 1111="ping -c 4 1.1.1.1"
 alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias extip="curl ipecho.net/plain; echo"
-alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/a5043364a4a4a3f0786d9702a3206770161f6fd1/.gitignore"
+alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/1a7caecd54b9ba4310c2b1b5594878927af85415/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
 function ouisearch() {
   curl -s -N "https://gitlab.com/wireshark/wireshark/-/raw/master/manuf" | grep -i "$1"
