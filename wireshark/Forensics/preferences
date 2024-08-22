@@ -481,7 +481,7 @@ capture.devices_pmode: enp0s13f0u1u4(1),any(1),lo(1),enp0s31f6(1),docker0(1),wlp
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::bcee:3031:3177:cb3e any eq 22, deny tcp any eq 22 host fe80::bcee:3031:3177:cb3e, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 143.129.254.164 any eq 22, deny tcp any eq 22 host 143.129.254.164, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::ea6a:64ff:fec1:ae50 any eq 22, deny tcp any eq 22 host fe80::ea6a:64ff:fec1:ae50, deny tcp host 172.17.0.1 any eq 22, deny tcp any eq 22 host 172.17.0.1, deny tcp host 192.168.0.14 any eq 22, deny tcp any eq 22 host 192.168.0.14, permit ip any any
 
 # Packets to capture
 # A string
@@ -609,7 +609,7 @@ capture.devices_pmode: enp0s13f0u1u4(1),any(1),lo(1),enp0s31f6(1),docker0(1),wlp
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::bcee:3031:3177:cb3e or host 172.17.0.1 or host 143.129.254.164) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::ea6a:64ff:fec1:ae50 or host 172.17.0.1 or host 192.168.0.14) and port 22)
 
 # Packets to capture
 # A string
