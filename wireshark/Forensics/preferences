@@ -268,7 +268,7 @@ gui.color_filter_bg.deprecated: 666600
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %Gt,%uS,%uD,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:ip.ttl:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:http.user_agent:0:R
+gui.column.hidden: %Gt,%uS,%uD,%Cus:tcp.window_size_value:0:R,%Cus:dhcp.option.hostname:0:R,%Cus:kerberos.CNameString:0:R,%Cus:ip.ttl:0:R,%Cus:_ws.expert:0:R,%Cus:pkt_comment:0:R,%Cus:tcp.seq_raw:0:R,%L,%Cus:tls.handshake.ja3:0:R,%Cus:tls.handshake.ja3s:0:R,%Cus:dns.resp.ttl:0:R,%Cus:ip.geoip.country:0:R,%Cus:frame.coloring_rule.name:0:R,%Cus:frame.coloring_rule.string:0:R,%Cus:tcp.flags.fin:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -288,6 +288,7 @@ gui.column.format:
 	"CNameString", "%Cus:kerberos.CNameString:0:R",
 	"Host / Query", "%Cus:http.host or tls.handshake.extensions_server_name or tls.handshake.extensions_server_name or kerberos.CNameString or arp.src.proto_ipv4 or dns.qry.name or dhcp.fqdn.name or dhcp.option.hostname:0:U",
 	"Stream ID", "%Cus:tcp.stream or udp.stream:0:R",
+	"Country", "%Cus:ip.geoip.country_iso:0:R",
 	"TTL", "%Cus:ip.ttl:0:R",
 	"Expert Info", "%Cus:_ws.expert:0:R",
 	"Packet comments", "%Cus:pkt_comment:0:R",
@@ -297,10 +298,10 @@ gui.column.format:
 	"JA3S", "%Cus:tls.handshake.ja3s:0:R",
 	"Time to live", "%Cus:dns.resp.ttl:0:R",
 	"Src or Dst GeoIP Country (Full)", "%Cus:ip.geoip.country:0:R",
-	"Country", "%Cus:ip.geoip.country_iso:0:R",
 	"Coloring Rule Name", "%Cus:frame.coloring_rule.name:0:R",
 	"Coloring Rule String", "%Cus:frame.coloring_rule.string:0:R",
 	"User-Agent", "%Cus:http.user_agent:0:R",
+	"Fin", "%Cus:tcp.flags.fin:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########

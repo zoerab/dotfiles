@@ -118,3 +118,4 @@
 "TRUE","MISC // Streams // UDP Stream","udp.stream == ${udp.stream}",""
 "TRUE","MISC // Executables, Scripts, Documents","(frame contains \x22DOS mode\x22 or frame contains \x22MZ\x22) or (http.request.uri matches \x22(?i)\x5c\x5c.(tar|exe|zip|pdf|bin|lnk|php|js|ps1|vbs|cmd|scr|doc|docx|xls|xlsx|bat|dll|pif|hta|jar|swf|chm|msp|gadget|msi|reg|com|cpl)$\x22)",""
 "TRUE","MISC // Comments","pkt_comment","Packets with embedded comments"
+"TRUE","TCP // TCP Stream reference","tcp.stream == ${tcp.stream}","Field value reference"
