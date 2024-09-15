@@ -12,6 +12,7 @@
 "TRUE","TCP // TCP Unusual Ports","!(tcp.port in {25, 80, 110, 135, 143, 443, 445, 995, 8000} || udp.port in {53, 67, 68, 123, 137, 138, 161, 162, 1900}) and !(arp)",""
 "TRUE","TCP // TCP only MSS","(tcp.hdr_len == 24) && (tcp.option_kind == 2)",""
 "TRUE","TCP // TCP Stream reference","tcp.stream == ${tcp.stream}","Field value reference"
+"TRUE","UDP // UDP Stream reference","udp.stream == ${udp.stream}","Field value reference"
 "TRUE","DNS // DNS everything","udp.port eq 53 or tcp.port eq 53 or ipv6.nxt eq 44 or ip.flags.mf eq 1",""
 "TRUE","DNS // DNS and MDNS","udp.port eq 53 or tcp.port eq 53 or ipv6.nxt eq 44 or ip.flags.mf eq 1 or mdns",""
 "TRUE","DNS // DNS queries only","dns.flags.response eq 0",""
