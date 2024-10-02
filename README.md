@@ -126,6 +126,13 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+* Wireshark
+
+```
+mv ~/.config/wireshark/profiles ~/.config/wireshark/profiles.BACKUP
+ln -s ~/dotfiles/wireshark/profiles ~/.config/wireshark/profiles
+```
+
 Start Neovim and `:PlugInstall` to install plugins
 
 
