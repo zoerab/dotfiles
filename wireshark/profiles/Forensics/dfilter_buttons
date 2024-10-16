@@ -47,7 +47,7 @@
 "TRUE","GEO // NOT Belgium","!(ip.geoip.country_iso == \x22BE\x22 or ipv6.geoip.country_iso == \x22BE\x22)",""
 "TRUE","GEO // Russia","(ip.geoip.country_iso == \x22RU\x22 or ipv6.geoip.country_iso == \x22RU\x22)",""
 "TRUE","GEO // China","(ip.geoip.country_iso == \x22CN\x22 or ipv6.geoip.country_iso == \x22CN\x22)",""
-"TRUE","GEO // North Korea","(ip.geoip.country == \x22North Korea\x22 or ipv6.geoip.country == \x22North Korea\x22)",""
+"TRUE","GEO // North Korea","(ip.geoip.country_iso == \x22NK\x22 or ipv6.geoip.country_iso == \x22NK\x22)",""
 "TRUE","GEO // Iran","(ip.geoip.country_iso == \x22IR\x22 or ipv6.geoip.country_iso == \x22IR\x22)",""
 "TRUE","GEO // Brazil","(ip.geoip.country == \x22Brazil\x22 or ipv6.geoip.country == \x22Brazil\x22)",""
 "TRUE","GEO // Poland","(ip.geoip.country == \x22Poland\x22 or ipv6.geoip.country == \x22Poland\x22)",""

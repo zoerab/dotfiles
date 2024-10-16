@@ -1,6 +1,6 @@
 # This file was created by Wireshark. Edit with care.
-@Bad Country Code Inbound?@ip.geoip.src_country_iso in {NK,RU,CN}@[65535,0,0][0,0,0]
-@Bad Country Code Out?@ip.geoip.dst_country_iso in {NK,RU,CN}@[65535,0,0][0,0,0]
+!@Bad Country Code Inbound?@ip.geoip.src_country_iso in {"NK","RU","CN"}@[65535,0,0][0,0,0]
+!@Bad Country Code Out?@ip.geoip.dst_country_iso in {"NK","RU","CN"}@[65535,0,0][0,0,0]
 @High DNS Count@dns.count.answers > 5@[65021,37008,5397][0,0,0]
 @ICMP Errors@icmp.type eq 3 || icmp.type eq 4 || icmp.type eq 5 || icmp.type eq 11 || icmpv6.type eq 1 || icmpv6.type eq 2 || icmpv6.type eq 3 || icmpv6.type eq 4@[0,0,0][25957,65535,21845]
 @Executable Header@frame contains 54:68:69:73:20:70:72:6f:67:72:61:6d:20:63:61:6e:6e:6f:74:20:62:65:20:72:75:6e:20:69:6e:20:44:4f:53:20:6d:6f:64:65:2e:0d@[65535,65535,65535][65535,17990,0]
