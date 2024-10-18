@@ -56,7 +56,7 @@
 "TRUE","GEO // Nigeria","(ip.geoip.country == \x22Nigeria\x22 or ipv6.geoip.country == \x22Nigeria\x22)",""
 "TRUE","GEO // Israel","(ip.geoip.country_iso == \x22IL\x22 or ipv6.geoip.country_iso == \x22IL\x22)","It's actually Palestine, everyone knows that!!!"
 "TRUE","GEO // US","(ip.geoip.country_iso == \x22US\x22 or ipv6.geoip.country_iso == \x22US\x22)",""
-"TRUE","GEO // Troublesome locations","ip.geoip.dst_country_iso in {\x22UA\x22, \x22CN\x22, \x22RU\x22, \x22KP\x22, \x22IL\x22, \x22PK\x22, \x22BR\x22, \x22IR\x22, \x22NG\x22, \x22SY\x22, \x22VN\x22, \x22RO\x22}",""
+"TRUE","GEO // Trouble","ip.geoip.dst_country_iso in {\x22UA\x22, \x22CN\x22, \x22RU\x22, \x22KP\x22, \x22IL\x22, \x22PK\x22, \x22BR\x22, \x22IR\x22, \x22NG\x22, \x22SY\x22, \x22VN\x22, \x22RO\x22}",""
 "TRUE","MAIL // All clear text","(smtp or tcp.port eq 25) or (imap or tcp.port eq 143) or (pop or tcp.port eq 110)",""
 "TRUE","MAIL // POP // POP basic","tcp.port eq 110 and tcp.flags eq 0x0002",""
 "TRUE","MAIL // SMTP // SMTP basic","smtp.req.command",""
