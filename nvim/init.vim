@@ -56,7 +56,8 @@ let g:gruvbox_vert_split = 'bg2'
 let g:gruvbox_contrast_dark = 'hard'
 " set background=light
 let g:gruvbox_contrast_light = 'hard'
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme habamax
 
 
 "-----------------------------------------------------"

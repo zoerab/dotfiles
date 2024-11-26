@@ -61,7 +61,7 @@ COMPLETION_WAITING_DOTS="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+# HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -125,8 +125,24 @@ fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l > /dev/null || ssh-add
 
-# Ignoring duplicate commands in history
-export HISTCONTROL=ignoredups
+# History size
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# Keybindings
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# Completion styling (search case-insensitive)
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # Nvim FTW
 export EDITOR=/usr/bin/nvim
@@ -159,11 +175,10 @@ export LS_OPTS='--color=auto'
 [[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
 
 # ALIEN prompt customization
-export ALIEN_THEME="bnw"
-export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
-export ALIEN_GIT_MOD_SYM=✹
-
-export USE_NERD_FONT=1
+# export ALIEN_THEME="bnw"
+# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
+# export ALIEN_GIT_MOD_SYM=✹
+# export USE_NERD_FONT=1
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -181,4 +196,5 @@ export LC_ALL="en_US.UTF-8"
 source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+# BROOT tweaks
 source /home/void/.config/broot/launcher/bash/br
