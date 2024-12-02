@@ -15,7 +15,7 @@
 **/recent
 **/recent_common
 **/ssl_keys
-**/GeoIP*
+# **/GeoIP*
 **/*.lua
 **/plugins/
 **/extcap/

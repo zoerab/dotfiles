@@ -128,3 +128,4 @@
 "TRUE","DNS // Field Value DNS response","ip.addr == ${dns.a}",""
 "TRUE","MISC // Strange ports","tcp and !tcp.port in {80,443,135,8000}",""
 "TRUE","MISC // Kerberos","(tcp.port == 88 || udp.port == 88) and kerberos","All Kerberos traffic"
+"TRUE","TCP // TCP ACK non-zero","tcp.ack.nonzero","The acknowledgment number field is nonzero while the ACK flag is not set (possible NMAP scan)"
