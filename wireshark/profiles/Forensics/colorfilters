@@ -13,6 +13,7 @@
 @SCTP ABORT@sctp.chunk_type eq ABORT@[42148,0,0][65535,64764,40092]
 @TTL low or unexpected@( ! ip.dst == 224.0.0.0/4 && ip.ttl < 5 && !pim && !ospf) || (ip.dst == 224.0.0.0/24 && ip.dst != 224.0.0.251 && ip.ttl != 1 && !(vrrp || carp))@[42148,0,0][60652,61680,60395]
 @Checksum Errors@eth.fcs.status=="Bad" || ip.checksum.status=="Bad" || tcp.checksum.status=="Bad" || udp.checksum.status=="Bad" || sctp.checksum.status=="Bad" || mstp.checksum.status=="Bad" || cdp.checksum.status=="Bad" || edp.checksum.status=="Bad" || wlan.fcs.status=="Bad" || stt.checksum.status=="Bad"@[4626,10023,11822][63479,34695,34695]
+@Windows Executable@frame matches "MZ|DOS mode"@[65535,1542,2570][64764,64764,64764]
 @SMB@smb || nbss || nbns || netbios@[65278,65535,53456][4626,10023,11822]
 @HTTP@http || tcp.port == 80 || http2@[58596,65535,51143][4626,10023,11822]
 @HTTP Errors (custom)@http.response.code >399@[58596,65535,51143][65535,0,0]
