@@ -35,7 +35,7 @@
 "TRUE","HTTP // TLS","tls or ssl",""
 "TRUE","HTTP // TLS Handshakes","tls.handshake",""
 "TRUE","HTTP // TLS Certificate","tls.handshake.type == 11",""
-"TRUE","HTTP // TLS OLD versions","tls.handshake.extensions.supported_version in {0x0300, 0x0301, 0x0302}",""
+"TRUE","HTTP // TLS OLD versions","tls.handshake.version < 0x303",""
 "TRUE","HTTP // TLS Client Hello","tls.handshake.type == 1",""
 "TRUE","HTTP // TLS Server Hello","tls.handshake.type == 2",""
 "TRUE","HTTP // TLS JA3 or JA4","(tls.handshake.ja3) || (tls.handshake.ja4)",""
