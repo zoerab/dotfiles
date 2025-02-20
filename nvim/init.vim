@@ -373,4 +373,4 @@ nmap <leader>mq :MarkedQuit<cr>
 "-----------------------------------------------------"
 " Quit with :Q
 "-----------------------------------------------------"
-command -nargs=0 Quit :qa!
+" command -nargs=0 Quit :qa!
