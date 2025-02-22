@@ -14,8 +14,9 @@ alias fgrep="fgrep --color=always"
 alias hexedit="hexedit --color"
 alias ip="ip --color=auto"
 alias less="less --RAW-CONTROL-CHARS"
-alias ll="lsd -lah --color=always --group-directories-first"
+# alias ll="lsd -lah --color=always --group-directories-first"
 # alias ll="eza -lahg --icons --color=always --group-directories-first --extended"
+alias ll="eza -lahg --icons --color=always --group-directories-first"
 alias lstree='lsd --tree --long'
 alias lynx="lynx -vikeys"
 alias mkdir="mkdir -p"
@@ -37,6 +38,16 @@ alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/1a7caecd54b9ba4310c2b1b5594878927af85415/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 function ouisearch() {
   curl -s -N "https://gitlab.com/wireshark/wireshark/-/raw/master/manuf" | grep -i "$1"
 }
