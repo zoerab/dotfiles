@@ -11,6 +11,7 @@ alias pf="fzf --preview='bat --color=always --style=numbers {} || cat {}' --bind
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
+alias ef='nvim $(fzf --preview="bat --color=always {}")'
 alias hexedit="hexedit --color"
 alias ip="ip --color=auto"
 alias less="less --RAW-CONTROL-CHARS"
