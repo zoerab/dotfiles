@@ -58,7 +58,7 @@ ZSHRC + aliases file linking
 Back-up pre-existing zshrc
 
 ```
-mv ~/.zshrc{,.BACKUP}
+mv ~/.zshrc{,.bak}
 ```
 
 Place config files
@@ -84,56 +84,31 @@ ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 Run `tmux` and press **prefix + I** (capital I, as in Install) to fetch all plugins.
 
-* Vim
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-```
-ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
-```
-Start Vim and `:PlugInstall` to install plugins
 
----
-
-For the people who want to migrate from VIM to Neovim (Nvim) do the following:
-
+* Eza
 ```
-cp -f ~/.vimrc ~/.config/nvim/init.vim
+ln -s ~/dotfiles/eza/one_dark.yml ~/.config/eza/theme.yml
 ```
 
 
-If applicable, do also 
+* Neovim
 
+Backup your stuff first just in case...
 ```
-cp -rf ~/.vim/autoload/ ~/.local/share/nvim/site/autoload/
-```
-
----
-
-For those who use Neovim already
-
-```
-mkdir -p ~/.config/nvim/
+mv ~/.config/nvim{,.bak}
 ```
 
+Symlink the entire nvim directory
 ```
-ln -s ~/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
-```
-
-```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/dotfiles/nvim/ ~/.config/nvim
 ```
 
 * Wireshark
 
 ```
-mv ~/.config/wireshark/profiles ~/.config/wireshark/profiles.BACKUP
+mv ~/.config/wireshark/profiles{,.bak}
 ln -s ~/dotfiles/wireshark/profiles ~/.config/wireshark/profiles
 ```
-
-Start Neovim and `:PlugInstall` to install plugins
 
 
 Pat yourself on your back an have a `insert_beverage_here` for a job well done! 🍻
