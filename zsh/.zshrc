@@ -197,6 +197,11 @@ source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range=:500 {} || cat {}'"
 
+# Yazi tweaks
+# export YAZI_IMG_PREVIEWER=wezterm
+export YAZI_IMG_PREVIEWER=ueberzugpp
+
+
 # BROOT tweaks
 source /home/void/.config/broot/launcher/bash/br
 
