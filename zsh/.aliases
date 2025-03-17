@@ -22,6 +22,7 @@ alias lstree='lsd --tree --long'
 alias lynx="lynx -vikeys"
 alias mkdir="mkdir -p"
 alias mtr="sudo mtr"
+alias my_user_agent='curl -s https://www.whatismybrowser.com/detect/what-is-my-user-agent/ | grep "detected_value" | cut -d ">" -f2 | cut -d "<" -f1'
 alias strings="strings -n 3"
 alias mv="mv -i"
 alias rm="rm -i"
