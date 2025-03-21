@@ -17,7 +17,7 @@ alias ip="ip --color=auto"
 alias less="less --RAW-CONTROL-CHARS"
 # alias ll="lsd -lah --color=always --group-directories-first"
 # alias ll="eza -lahg --icons --color=always --group-directories-first --extended"
-alias ll="eza -lahg --icons --color=always --group-directories-first"
+alias ll="eza -lahg --octal-permissions --icons --color=always --group-directories-first"
 alias lstree='lsd --tree --long'
 alias lynx="lynx -vikeys"
 alias mkdir="mkdir -p"
