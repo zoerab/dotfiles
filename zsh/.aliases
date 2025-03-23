@@ -42,6 +42,7 @@ alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/1a7caecd54b9ba4310c2b1b5594878927af85415/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
 
+# YAZI CLI file manager with a few tweaks
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -51,8 +52,26 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# MAC OUI search
 function ouisearch() {
   curl -s -N "https://gitlab.com/wireshark/wireshark/-/raw/master/manuf" | grep -i "$1"
+}
+
+# AWK wrapper for grabbing fields
+function field() {
+	awk -F "${2:- }" "{ print \$${1:-1} }"
+}
+
+# Total: Sum numeric values from a specified column (default: column 1, space delimiter)
+# for TAB delimiter use -> $'\t'
+total() {
+  awk -F "${2:- }" '
+    {
+      col = $'"${1:-1}"'
+      if (col ~ /^-?[0-9]+([.][0-9]+)?$/) s += col
+    }
+    END { print s }
+  ' "${@:3}"
 }
 
 # Get TOP process eating CPU
