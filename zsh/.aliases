@@ -42,6 +42,7 @@ alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/1a7caecd54b9ba4310c2b1b5594878927af85415/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
 alias hl="rg --passthru"
+alias gitfixlast="git add . && git commit --amend --no-edit && git push -f"
 
 # YAZI CLI file manager with a few tweaks
 function y() {
