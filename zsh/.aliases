@@ -41,6 +41,7 @@ alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias extip="curl ipecho.net/plain; echo"
 alias file-gitignore="wget -O .gitignore https://gist.githubusercontent.com/zoerab/ac336f006e952c6dbf01/raw/1a7caecd54b9ba4310c2b1b5594878927af85415/.gitignore"
 alias flushdns='sudo systemctl restart nscd'
+alias hl="rg --passthru"
 
 # YAZI CLI file manager with a few tweaks
 function y() {
