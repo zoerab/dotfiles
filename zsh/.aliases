@@ -121,7 +121,7 @@ alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
 alias yta-opus="yt-dlp --extract-audio --audio-format opus "
 alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
 alias yta-wav="yt-dlp --extract-audio --audio-format wav "
-alias ytv-best="yt-dlp -f bestvideo+bestaudio "
+alias ytv-best='yt-dlp --format "bestvideo+bestaudio/best"' 
 
 # Add new ip host pair to /etc/hosts (ex.: addhost 127.0.0.1 host.domain.local)
 function addhost() {
