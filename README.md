@@ -85,7 +85,7 @@ ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 Run `tmux` and press **prefix + I** (capital I, as in Install) to fetch all plugins.
 
 
-* Eza
+* Eza (Optional)
 ```
 ln -s ~/dotfiles/eza/one_dark.yml ~/.config/eza/theme.yml
 ```

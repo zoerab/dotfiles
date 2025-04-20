@@ -203,6 +203,6 @@ export YAZI_IMG_PREVIEWER=ueberzugpp
 
 
 # BROOT tweaks
-source /home/void/.config/broot/launcher/bash/br
+#source /home/void/.config/broot/launcher/bash/br
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
