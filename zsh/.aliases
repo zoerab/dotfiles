@@ -439,3 +439,29 @@ function tshark_tcp_data() {
     tshark -r "$1" -T fields -e tcp.payload | xxd -r -p | less -S
 }
 
+function mkvenv() {
+    if [ -z "$1" ]; then
+        echo "Usage: mkvenv <env_name>"
+        return 1
+    fi
+
+    # Check if python3 exists
+    if ! command -v python3 &>/dev/null; then
+        echo "Error: python3 is not installed or not in PATH."
+        return 1
+    fi
+
+    # Check if Python version is >= 3.6
+    PY_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+    REQUIRED="3.6"
+    if [ "$(printf '%s\n' "$REQUIRED" "$PY_VERSION" | sort -V | head -n1)" != "$REQUIRED" ]; then
+        echo "Error: Python $REQUIRED+ required (found $PY_VERSION)"
+        return 1
+    fi
+
+    python3 -m venv "$1"
+    echo "$1/" >> .gitignore
+    touch requirements.txt
+    source "$1/bin/activate"
+}
+
