@@ -35,7 +35,7 @@ alias mvp="mpv"
 alias restartplasma="kquitapp5 plasmashell && kstart5 plasmashell"
 
 # Custom stuff
-alias 4chandl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress"
+#alias 4chandl="wget -qe robots=off -rHDi.4cdn.org -nc -nd -ERs.jpg,html --show-progress"
 alias 1111="ping -c 4 1.1.1.1"
 alias bt="wget http://cachefly.cachefly.net/100mb.test -O /dev/null"
 alias extip="curl ipecho.net/plain; echo"
